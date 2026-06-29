@@ -1,0 +1,2129 @@
+{
+  "summary": {
+    "model": "minicpm_o",
+    "task": "SparseLibriMix2_noisy",
+    "n": 140,
+    "mnt": 200,
+    "baseline": {
+      "e2e_mean": 1.0117289251747674,
+      "e2e_median": 0.9315526044229046,
+      "gen_mean": 0.8390110121790453,
+      "gen_median": 0.76452828256879,
+      "in_tok_mean": 145.9,
+      "out_tok_mean": null
+    },
+    "agsc": {
+      "e2e_mean": 1.0780038586501697,
+      "e2e_median": 1.0154720484279096,
+      "gen_mean": 0.8996017055935226,
+      "gen_median": 0.8419715114869177,
+      "in_tok_mean": 298.4,
+      "out_tok_mean": null
+    },
+    "delta_e2e_mean_s": 0.06627493347540225,
+    "delta_e2e_pct": 6.550661133262928,
+    "delta_in_tok": 152.49999999999997
+  },
+  "rows": [
+    {
+      "id": "SparseLibriMix2_noisy_000009",
+      "baseline": {
+        "e2e": 0.7743300839792937,
+        "gen": 0.6364765239413828,
+        "in_tok": 127,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1991578009910882,
+        "gen": 0.985942087136209,
+        "in_tok": 275,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000010",
+      "baseline": {
+        "e2e": 0.8595267210621387,
+        "gen": 0.7038445300422609,
+        "in_tok": 138,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9070407680701464,
+        "gen": 0.752671216847375,
+        "in_tok": 300,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000011",
+      "baseline": {
+        "e2e": 1.2220772979781032,
+        "gen": 1.0028874489944428,
+        "in_tok": 129,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.2232043219264597,
+        "gen": 1.068935171002522,
+        "in_tok": 280,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000014",
+      "baseline": {
+        "e2e": 0.8267388090025634,
+        "gen": 0.6940187008585781,
+        "in_tok": 126,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8708337561693043,
+        "gen": 0.7201385060325265,
+        "in_tok": 281,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000015",
+      "baseline": {
+        "e2e": 0.5804372110869735,
+        "gen": 0.4641249130945653,
+        "in_tok": 110,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.5989450449123979,
+        "gen": 0.44976794300600886,
+        "in_tok": 254,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000018",
+      "baseline": {
+        "e2e": 1.0888957099523395,
+        "gen": 0.8483636360615492,
+        "in_tok": 196,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0964934101793915,
+        "gen": 0.9281422051135451,
+        "in_tok": 364,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000021",
+      "baseline": {
+        "e2e": 1.3085604368243366,
+        "gen": 1.1035101260058582,
+        "in_tok": 190,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.8097785040736198,
+        "gen": 1.5902105320710689,
+        "in_tok": 365,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000028",
+      "baseline": {
+        "e2e": 1.338628700003028,
+        "gen": 1.1971887981053442,
+        "in_tok": 148,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3011904750019312,
+        "gen": 1.1576545820571482,
+        "in_tok": 286,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000029",
+      "baseline": {
+        "e2e": 1.4469772181473672,
+        "gen": 1.2699537640437484,
+        "in_tok": 148,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.34821098879911,
+        "gen": 1.1544075480196625,
+        "in_tok": 308,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000030",
+      "baseline": {
+        "e2e": 0.7586850600782782,
+        "gen": 0.6635037930682302,
+        "in_tok": 121,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8387963338755071,
+        "gen": 0.6061320991721004,
+        "in_tok": 264,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000032",
+      "baseline": {
+        "e2e": 0.7630998808890581,
+        "gen": 0.6139320260845125,
+        "in_tok": 150,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8067478470038623,
+        "gen": 0.6408341119531542,
+        "in_tok": 311,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000033",
+      "baseline": {
+        "e2e": 1.6988460989668965,
+        "gen": 1.4609674448147416,
+        "in_tok": 190,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.7073883379343897,
+        "gen": 1.5065799909643829,
+        "in_tok": 354,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000035",
+      "baseline": {
+        "e2e": 2.4397342239972204,
+        "gen": 2.2512203329242766,
+        "in_tok": 104,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7501153480261564,
+        "gen": 0.5710884230211377,
+        "in_tok": 246,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000039",
+      "baseline": {
+        "e2e": 0.9111210100818425,
+        "gen": 0.7728279971051961,
+        "in_tok": 130,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0316909330431372,
+        "gen": 0.7982104211114347,
+        "in_tok": 278,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000043",
+      "baseline": {
+        "e2e": 1.1105897629167885,
+        "gen": 0.8879267040174454,
+        "in_tok": 141,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9923417600803077,
+        "gen": 0.824260147055611,
+        "in_tok": 290,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000045",
+      "baseline": {
+        "e2e": 1.4305740240961313,
+        "gen": 1.2518480378203094,
+        "in_tok": 155,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.5808325880207121,
+        "gen": 1.4002256870735437,
+        "in_tok": 312,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000047",
+      "baseline": {
+        "e2e": 0.8834104228299111,
+        "gen": 0.7432045149616897,
+        "in_tok": 121,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7870155849959701,
+        "gen": 0.6477710769977421,
+        "in_tok": 249,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000048",
+      "baseline": {
+        "e2e": 1.0922214549500495,
+        "gen": 0.8652849928475916,
+        "in_tok": 169,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.106671242043376,
+        "gen": 0.93942093802616,
+        "in_tok": 336,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000049",
+      "baseline": {
+        "e2e": 0.9234720768872648,
+        "gen": 0.7877439470030367,
+        "in_tok": 160,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0010911230929196,
+        "gen": 0.7768946660216898,
+        "in_tok": 324,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000050",
+      "baseline": {
+        "e2e": 1.1693981259595603,
+        "gen": 0.9494372869376093,
+        "in_tok": 208,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1259825320448726,
+        "gen": 0.9687886571045965,
+        "in_tok": 372,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000054",
+      "baseline": {
+        "e2e": 0.9767231259029359,
+        "gen": 0.8263128409162164,
+        "in_tok": 128,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9242997108958662,
+        "gen": 0.6424485458992422,
+        "in_tok": 258,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000056",
+      "baseline": {
+        "e2e": 1.234133421909064,
+        "gen": 1.0913598181214184,
+        "in_tok": 170,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4491530400700867,
+        "gen": 1.2781632791738957,
+        "in_tok": 331,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000061",
+      "baseline": {
+        "e2e": 1.3341858950443566,
+        "gen": 1.0043705198913813,
+        "in_tok": 156,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.403998272959143,
+        "gen": 1.19605488399975,
+        "in_tok": 314,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000067",
+      "baseline": {
+        "e2e": 0.9653463501017541,
+        "gen": 0.7356143200304359,
+        "in_tok": 198,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.8301714740227908,
+        "gen": 1.6845245631411672,
+        "in_tok": 353,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000068",
+      "baseline": {
+        "e2e": 0.8722721301019192,
+        "gen": 0.685204072855413,
+        "in_tok": 126,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0085837049409747,
+        "gen": 0.8625634589698166,
+        "in_tok": 289,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000071",
+      "baseline": {
+        "e2e": 1.3923731348477304,
+        "gen": 1.2007185500115156,
+        "in_tok": 178,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4666483150795102,
+        "gen": 1.3134619020856917,
+        "in_tok": 340,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000073",
+      "baseline": {
+        "e2e": 1.1561420189682394,
+        "gen": 0.9080990250222385,
+        "in_tok": 193,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3882552278228104,
+        "gen": 1.1542423239443451,
+        "in_tok": 353,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000075",
+      "baseline": {
+        "e2e": 1.240540935890749,
+        "gen": 1.0377060680184513,
+        "in_tok": 168,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.252537155058235,
+        "gen": 1.0711229399312288,
+        "in_tok": 332,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000077",
+      "baseline": {
+        "e2e": 0.936253729974851,
+        "gen": 0.7256104799453169,
+        "in_tok": 163,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9735855141188949,
+        "gen": 0.7497515419963747,
+        "in_tok": 331,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000079",
+      "baseline": {
+        "e2e": 1.275840527145192,
+        "gen": 1.1273706529755145,
+        "in_tok": 189,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.6430308311246336,
+        "gen": 1.3919463441707194,
+        "in_tok": 359,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000083",
+      "baseline": {
+        "e2e": 0.8200735470745713,
+        "gen": 0.4852349441498518,
+        "in_tok": 168,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0064233469311148,
+        "gen": 0.8085043369792402,
+        "in_tok": 325,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000086",
+      "baseline": {
+        "e2e": 1.0747769258450717,
+        "gen": 0.799577800091356,
+        "in_tok": 121,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.930143159115687,
+        "gen": 0.7796819750219584,
+        "in_tok": 264,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000087",
+      "baseline": {
+        "e2e": 1.164808148983866,
+        "gen": 0.9180176898371428,
+        "in_tok": 184,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.770681954920292,
+        "gen": 1.457621734123677,
+        "in_tok": 348,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000088",
+      "baseline": {
+        "e2e": 1.3508993480354548,
+        "gen": 1.201182957040146,
+        "in_tok": 154,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3423584839329123,
+        "gen": 1.19632877712138,
+        "in_tok": 321,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000091",
+      "baseline": {
+        "e2e": 0.9061296239960939,
+        "gen": 0.7688879000488669,
+        "in_tok": 132,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7706245810259134,
+        "gen": 0.4800603960175067,
+        "in_tok": 265,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000094",
+      "baseline": {
+        "e2e": 1.0231615810189396,
+        "gen": 0.8856064300052822,
+        "in_tok": 139,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.065723131177947,
+        "gen": 0.9131275510881096,
+        "in_tok": 301,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000098",
+      "baseline": {
+        "e2e": 0.8536240679677576,
+        "gen": 0.5411334650125355,
+        "in_tok": 120,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.6634942321106791,
+        "gen": 0.4986561581026763,
+        "in_tok": 266,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000100",
+      "baseline": {
+        "e2e": 1.5698066018521786,
+        "gen": 1.3749344069510698,
+        "in_tok": 173,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.6635484371799976,
+        "gen": 1.4265518400352448,
+        "in_tok": 337,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000107",
+      "baseline": {
+        "e2e": 0.982880397932604,
+        "gen": 0.8149898319970816,
+        "in_tok": 141,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0640339178498834,
+        "gen": 0.8435402880422771,
+        "in_tok": 288,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000108",
+      "baseline": {
+        "e2e": 1.3187097979243845,
+        "gen": 1.113029332831502,
+        "in_tok": 157,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.081530474126339,
+        "gen": 0.79120041616261,
+        "in_tok": 315,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000110",
+      "baseline": {
+        "e2e": 1.2065190591383725,
+        "gen": 1.0347450140397996,
+        "in_tok": 164,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0976293559651822,
+        "gen": 0.921604105969891,
+        "in_tok": 325,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000111",
+      "baseline": {
+        "e2e": 0.8658598898909986,
+        "gen": 0.6682659429498017,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9385534850880504,
+        "gen": 0.736929465085268,
+        "in_tok": 271,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000112",
+      "baseline": {
+        "e2e": 1.0959855979308486,
+        "gen": 0.9303894280456007,
+        "in_tok": 204,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.172778852051124,
+        "gen": 0.9970287731848657,
+        "in_tok": 372,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000117",
+      "baseline": {
+        "e2e": 1.2325658400077373,
+        "gen": 1.0921882879920304,
+        "in_tok": 176,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3144581310916692,
+        "gen": 1.059118937002495,
+        "in_tok": 345,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000118",
+      "baseline": {
+        "e2e": 2.390570198185742,
+        "gen": 2.1543367002159357,
+        "in_tok": 210,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.7485018209554255,
+        "gen": 1.5853772128466517,
+        "in_tok": 377,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000120",
+      "baseline": {
+        "e2e": 1.446164108812809,
+        "gen": 1.0906174599658698,
+        "in_tok": 137,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0089514330029488,
+        "gen": 0.7684361569117755,
+        "in_tok": 296,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000121",
+      "baseline": {
+        "e2e": 0.6742755980230868,
+        "gen": 0.5312316310591996,
+        "in_tok": 151,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.334026100113988,
+        "gen": 1.1446165030356497,
+        "in_tok": 304,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000122",
+      "baseline": {
+        "e2e": 0.5297789140604436,
+        "gen": 0.3932041209191084,
+        "in_tok": 121,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.611417873064056,
+        "gen": 0.4525421920698136,
+        "in_tok": 264,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000123",
+      "baseline": {
+        "e2e": 1.1102009799797088,
+        "gen": 0.9607608981896192,
+        "in_tok": 131,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9043868600856513,
+        "gen": 0.6744360690936446,
+        "in_tok": 267,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000125",
+      "baseline": {
+        "e2e": 0.987062931060791,
+        "gen": 0.824217950925231,
+        "in_tok": 194,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.811134871095419,
+        "gen": 1.6262218940537423,
+        "in_tok": 360,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000127",
+      "baseline": {
+        "e2e": 0.7873837829101831,
+        "gen": 0.46690944908186793,
+        "in_tok": 138,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7067774550523609,
+        "gen": 0.5265762989874929,
+        "in_tok": 301,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000128",
+      "baseline": {
+        "e2e": 0.7551527509931475,
+        "gen": 0.5473077381029725,
+        "in_tok": 126,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7464085421524942,
+        "gen": 0.5931785069406033,
+        "in_tok": 273,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000133",
+      "baseline": {
+        "e2e": 0.5568682488519698,
+        "gen": 0.4233470391482115,
+        "in_tok": 118,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9947383650578558,
+        "gen": 0.6941294008865952,
+        "in_tok": 261,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000136",
+      "baseline": {
+        "e2e": 1.0663478549104184,
+        "gen": 0.8894764340948313,
+        "in_tok": 177,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4940291289240122,
+        "gen": 1.3219484828878194,
+        "in_tok": 335,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000137",
+      "baseline": {
+        "e2e": 0.8552621300332248,
+        "gen": 0.7200623138342053,
+        "in_tok": 144,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9475959469564259,
+        "gen": 0.7565702721476555,
+        "in_tok": 299,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000139",
+      "baseline": {
+        "e2e": 1.2556382729671896,
+        "gen": 1.0494260769337416,
+        "in_tok": 160,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.284952709916979,
+        "gen": 1.1295849969610572,
+        "in_tok": 320,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000140",
+      "baseline": {
+        "e2e": 0.7570944058243185,
+        "gen": 0.5593661528546363,
+        "in_tok": 184,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8487013150006533,
+        "gen": 0.5904123270884156,
+        "in_tok": 351,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000141",
+      "baseline": {
+        "e2e": 0.662276241928339,
+        "gen": 0.5262277498841286,
+        "in_tok": 136,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1534039590042084,
+        "gen": 0.8706069691106677,
+        "in_tok": 290,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000142",
+      "baseline": {
+        "e2e": 0.49427391099743545,
+        "gen": 0.3348224190995097,
+        "in_tok": 101,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.568245449103415,
+        "gen": 0.3616106540430337,
+        "in_tok": 210,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000143",
+      "baseline": {
+        "e2e": 1.390842615859583,
+        "gen": 1.2107761830557138,
+        "in_tok": 137,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8534301370382309,
+        "gen": 0.7115425888914615,
+        "in_tok": 295,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000147",
+      "baseline": {
+        "e2e": 1.13964349986054,
+        "gen": 0.980078045045957,
+        "in_tok": 159,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4763338740449399,
+        "gen": 1.2537146599497646,
+        "in_tok": 317,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000150",
+      "baseline": {
+        "e2e": 0.8901218969840556,
+        "gen": 0.7521482210140675,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8557144741062075,
+        "gen": 0.7140650099609047,
+        "in_tok": 267,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000152",
+      "baseline": {
+        "e2e": 0.7897158388514072,
+        "gen": 0.6228710769210011,
+        "in_tok": 167,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.028632105095312,
+        "gen": 0.8812439960893244,
+        "in_tok": 327,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000153",
+      "baseline": {
+        "e2e": 0.8861706289462745,
+        "gen": 0.7505982120055705,
+        "in_tok": 118,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.83377437107265,
+        "gen": 0.6972793859895319,
+        "in_tok": 252,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000155",
+      "baseline": {
+        "e2e": 1.4559482680633664,
+        "gen": 1.1863870890811086,
+        "in_tok": 165,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0070864828303456,
+        "gen": 0.8612343540880829,
+        "in_tok": 329,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000156",
+      "baseline": {
+        "e2e": 1.1282668381463736,
+        "gen": 0.9481792419683188,
+        "in_tok": 143,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.102762407856062,
+        "gen": 0.9514368139207363,
+        "in_tok": 293,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000161",
+      "baseline": {
+        "e2e": 1.4687346247956157,
+        "gen": 1.3168993119616061,
+        "in_tok": 175,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4349245559424162,
+        "gen": 1.289478373946622,
+        "in_tok": 344,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000163",
+      "baseline": {
+        "e2e": 1.1657848169561476,
+        "gen": 1.0199733201880008,
+        "in_tok": 148,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3062842458020896,
+        "gen": 1.093665077118203,
+        "in_tok": 302,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000164",
+      "baseline": {
+        "e2e": 1.4456185889430344,
+        "gen": 1.3021107581444085,
+        "in_tok": 174,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3522430900484324,
+        "gen": 1.184522100025788,
+        "in_tok": 337,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000166",
+      "baseline": {
+        "e2e": 0.5482264168094844,
+        "gen": 0.4318307018838823,
+        "in_tok": 113,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7460982699412853,
+        "gen": 0.5876002800650895,
+        "in_tok": 258,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000168",
+      "baseline": {
+        "e2e": 0.6368734310381114,
+        "gen": 0.5197944319806993,
+        "in_tok": 104,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.5712076530326158,
+        "gen": 0.36347253108397126,
+        "in_tok": 234,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000169",
+      "baseline": {
+        "e2e": 1.4695486810524017,
+        "gen": 1.2589106080122292,
+        "in_tok": 164,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.5716753769665956,
+        "gen": 1.3132602600380778,
+        "in_tok": 327,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000171",
+      "baseline": {
+        "e2e": 1.508763127028942,
+        "gen": 1.1476846130099148,
+        "in_tok": 159,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1656835658941418,
+        "gen": 0.9900391402188689,
+        "in_tok": 326,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000173",
+      "baseline": {
+        "e2e": 0.8925459499005228,
+        "gen": 0.7042227520141751,
+        "in_tok": 126,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9069020240567625,
+        "gen": 0.7520563818980008,
+        "in_tok": 277,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000175",
+      "baseline": {
+        "e2e": 1.0262529330793768,
+        "gen": 0.5944042808841914,
+        "in_tok": 122,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8004251369275153,
+        "gen": 0.6544950730167329,
+        "in_tok": 249,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000176",
+      "baseline": {
+        "e2e": 0.8055406401399523,
+        "gen": 0.6392168630845845,
+        "in_tok": 168,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9165310568641871,
+        "gen": 0.7097142180427909,
+        "in_tok": 326,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000182",
+      "baseline": {
+        "e2e": 0.8610983269754797,
+        "gen": 0.7250888289418072,
+        "in_tok": 120,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0155571869108826,
+        "gen": 0.723379666917026,
+        "in_tok": 255,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000183",
+      "baseline": {
+        "e2e": 0.7949711449909955,
+        "gen": 0.63009426696226,
+        "in_tok": 165,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0970088860485703,
+        "gen": 0.8883527929428965,
+        "in_tok": 326,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000187",
+      "baseline": {
+        "e2e": 1.092374486848712,
+        "gen": 0.7548763619270176,
+        "in_tok": 125,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7044409378431737,
+        "gen": 0.5401414569932967,
+        "in_tok": 262,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000189",
+      "baseline": {
+        "e2e": 0.5481528521049768,
+        "gen": 0.3031198801472783,
+        "in_tok": 120,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8077614379581064,
+        "gen": 0.5633563960436732,
+        "in_tok": 250,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000190",
+      "baseline": {
+        "e2e": 1.266181506915018,
+        "gen": 0.9939164379611611,
+        "in_tok": 159,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.2011429201811552,
+        "gen": 1.000466792844236,
+        "in_tok": 325,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000192",
+      "baseline": {
+        "e2e": 1.047385202953592,
+        "gen": 0.9096373289357871,
+        "in_tok": 137,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0749618590343744,
+        "gen": 0.8968750850763172,
+        "in_tok": 285,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000200",
+      "baseline": {
+        "e2e": 0.7741867080330849,
+        "gen": 0.6344355940818787,
+        "in_tok": 136,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9068525680340827,
+        "gen": 0.7425263340119272,
+        "in_tok": 287,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000205",
+      "baseline": {
+        "e2e": 0.8754613301716745,
+        "gen": 0.7372136691119522,
+        "in_tok": 120,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9421071198303252,
+        "gen": 0.7465732409618795,
+        "in_tok": 266,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000212",
+      "baseline": {
+        "e2e": 0.6749993958510458,
+        "gen": 0.531100447056815,
+        "in_tok": 128,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0971228289417922,
+        "gen": 0.9566279640421271,
+        "in_tok": 280,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000216",
+      "baseline": {
+        "e2e": 0.9901059549301863,
+        "gen": 0.8475214510690421,
+        "in_tok": 135,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0466819771099836,
+        "gen": 0.8677784600295126,
+        "in_tok": 295,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000217",
+      "baseline": {
+        "e2e": 1.8640139810740948,
+        "gen": 1.7070997369010001,
+        "in_tok": 208,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 2.008825608063489,
+        "gen": 1.7995363071095198,
+        "in_tok": 381,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000218",
+      "baseline": {
+        "e2e": 1.017021946143359,
+        "gen": 0.8162020219024271,
+        "in_tok": 168,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0246866799425334,
+        "gen": 0.8586786380037665,
+        "in_tok": 333,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000221",
+      "baseline": {
+        "e2e": 0.6500569621566683,
+        "gen": 0.49686546716839075,
+        "in_tok": 140,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0139017209876329,
+        "gen": 0.6980572631582618,
+        "in_tok": 298,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000223",
+      "baseline": {
+        "e2e": 1.1965708050411195,
+        "gen": 1.0301880661863834,
+        "in_tok": 152,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.2685518458019942,
+        "gen": 1.0921462620608509,
+        "in_tok": 316,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000226",
+      "baseline": {
+        "e2e": 1.6779559280257672,
+        "gen": 1.5381091288290918,
+        "in_tok": 185,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.110518696019426,
+        "gen": 0.9651241719257087,
+        "in_tok": 348,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000227",
+      "baseline": {
+        "e2e": 1.3175571598112583,
+        "gen": 1.1721702709328383,
+        "in_tok": 164,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3687500769738108,
+        "gen": 1.224827575031668,
+        "in_tok": 326,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000228",
+      "baseline": {
+        "e2e": 0.8730145718436688,
+        "gen": 0.7391350457910448,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9030770899262279,
+        "gen": 0.7276960439048707,
+        "in_tok": 267,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000229",
+      "baseline": {
+        "e2e": 1.0615356010384858,
+        "gen": 0.9204797791317105,
+        "in_tok": 155,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9888903319370002,
+        "gen": 0.8404027349315584,
+        "in_tok": 320,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000234",
+      "baseline": {
+        "e2e": 0.8813244639895856,
+        "gen": 0.6736750439740717,
+        "in_tok": 133,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8681003050878644,
+        "gen": 0.7212719100061804,
+        "in_tok": 291,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000235",
+      "baseline": {
+        "e2e": 0.8945420379750431,
+        "gen": 0.7509842650033534,
+        "in_tok": 127,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9691089820116758,
+        "gen": 0.8259051858913153,
+        "in_tok": 269,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000237",
+      "baseline": {
+        "e2e": 1.1338718270417303,
+        "gen": 0.9773473800159991,
+        "in_tok": 139,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1592201499734074,
+        "gen": 1.0011711758561432,
+        "in_tok": 291,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000240",
+      "baseline": {
+        "e2e": 0.6440610450226814,
+        "gen": 0.49916131305508316,
+        "in_tok": 141,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0277809309773147,
+        "gen": 0.8865356789901853,
+        "in_tok": 311,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000241",
+      "baseline": {
+        "e2e": 1.375803598901257,
+        "gen": 1.2367285860236734,
+        "in_tok": 155,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.356261814944446,
+        "gen": 1.2140331340488046,
+        "in_tok": 316,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000244",
+      "baseline": {
+        "e2e": 0.8432125910185277,
+        "gen": 0.7064645339269191,
+        "in_tok": 150,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9216024749912322,
+        "gen": 0.7736209470313042,
+        "in_tok": 313,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000247",
+      "baseline": {
+        "e2e": 0.7388003969099373,
+        "gen": 0.604543284047395,
+        "in_tok": 117,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.664838147116825,
+        "gen": 0.5098997221793979,
+        "in_tok": 247,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000249",
+      "baseline": {
+        "e2e": 2.303558866959065,
+        "gen": 2.121614578878507,
+        "in_tok": 215,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 2.4076270090881735,
+        "gen": 2.2378061120398343,
+        "in_tok": 378,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000250",
+      "baseline": {
+        "e2e": 1.1038592578843236,
+        "gen": 0.9655947790015489,
+        "in_tok": 140,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1436732958536595,
+        "gen": 0.9951808410696685,
+        "in_tok": 300,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000251",
+      "baseline": {
+        "e2e": 0.9503590420354158,
+        "gen": 0.8151711099781096,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8278771999757737,
+        "gen": 0.6813797031063586,
+        "in_tok": 260,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000252",
+      "baseline": {
+        "e2e": 0.6704013659618795,
+        "gen": 0.5348582959268242,
+        "in_tok": 139,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0699808329809457,
+        "gen": 0.9289000399876386,
+        "in_tok": 296,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000255",
+      "baseline": {
+        "e2e": 0.7337788189761341,
+        "gen": 0.6166643530596048,
+        "in_tok": 106,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7392614001873881,
+        "gen": 0.6185066071338952,
+        "in_tok": 233,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000256",
+      "baseline": {
+        "e2e": 0.6206129149068147,
+        "gen": 0.42128090490587056,
+        "in_tok": 142,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1449197209440172,
+        "gen": 0.9772574948146939,
+        "in_tok": 297,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000261",
+      "baseline": {
+        "e2e": 0.6287494420539588,
+        "gen": 0.4934612780343741,
+        "in_tok": 144,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9590311560314149,
+        "gen": 0.7972452000249177,
+        "in_tok": 306,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000262",
+      "baseline": {
+        "e2e": 1.4510820838622749,
+        "gen": 1.2362285838462412,
+        "in_tok": 195,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.4203723068349063,
+        "gen": 1.2719605721067637,
+        "in_tok": 357,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000263",
+      "baseline": {
+        "e2e": 0.587447171099484,
+        "gen": 0.45079854410141706,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7724629619624466,
+        "gen": 0.6320761889219284,
+        "in_tok": 252,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000265",
+      "baseline": {
+        "e2e": 1.3155314330942929,
+        "gen": 1.177677822066471,
+        "in_tok": 172,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.3866700769867748,
+        "gen": 1.2370962309651077,
+        "in_tok": 334,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000267",
+      "baseline": {
+        "e2e": 0.8957517158705741,
+        "gen": 0.7601686650887132,
+        "in_tok": 138,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0153869099449366,
+        "gen": 0.8745027459226549,
+        "in_tok": 292,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000268",
+      "baseline": {
+        "e2e": 0.5037521640770137,
+        "gen": 0.3885306699667126,
+        "in_tok": 99,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.5068817830178887,
+        "gen": 0.3793177269399166,
+        "in_tok": 208,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000269",
+      "baseline": {
+        "e2e": 0.9715213070157915,
+        "gen": 0.8158953951206058,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9461110299453139,
+        "gen": 0.8048010859638453,
+        "in_tok": 280,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000270",
+      "baseline": {
+        "e2e": 0.7833565569017082,
+        "gen": 0.6505954749882221,
+        "in_tok": 114,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8660433159675449,
+        "gen": 0.6990297609008849,
+        "in_tok": 260,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000271",
+      "baseline": {
+        "e2e": 0.9275122690014541,
+        "gen": 0.7925923890434206,
+        "in_tok": 136,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0303243650123477,
+        "gen": 0.8896326110698283,
+        "in_tok": 293,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000276",
+      "baseline": {
+        "e2e": 0.762487580999732,
+        "gen": 0.6262517380528152,
+        "in_tok": 168,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8933895891532302,
+        "gen": 0.7352247429080307,
+        "in_tok": 334,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000278",
+      "baseline": {
+        "e2e": 0.8168099601753056,
+        "gen": 0.6777891521342099,
+        "in_tok": 190,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.585016667144373,
+        "gen": 1.4184353649616241,
+        "in_tok": 353,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000282",
+      "baseline": {
+        "e2e": 0.49016877193935215,
+        "gen": 0.36755705112591386,
+        "in_tok": 103,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.6157339031342417,
+        "gen": 0.40757121494971216,
+        "in_tok": 212,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000283",
+      "baseline": {
+        "e2e": 0.6253873780369759,
+        "gen": 0.509258690988645,
+        "in_tok": 113,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.6896811919286847,
+        "gen": 0.5656087859533727,
+        "in_tok": 261,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000284",
+      "baseline": {
+        "e2e": 0.6388821750879288,
+        "gen": 0.4990696129389107,
+        "in_tok": 123,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.6441918439231813,
+        "gen": 0.5037856281269342,
+        "in_tok": 253,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000287",
+      "baseline": {
+        "e2e": 0.9162322669290006,
+        "gen": 0.7076427328865975,
+        "in_tok": 115,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9385336849372834,
+        "gen": 0.7990504950284958,
+        "in_tok": 261,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000295",
+      "baseline": {
+        "e2e": 0.7303185109049082,
+        "gen": 0.5558300300035626,
+        "in_tok": 137,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.7296081860549748,
+        "gen": 0.5898079669568688,
+        "in_tok": 289,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000299",
+      "baseline": {
+        "e2e": 0.7410641459282488,
+        "gen": 0.6072607841342688,
+        "in_tok": 129,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8931891820393503,
+        "gen": 0.7532926711719483,
+        "in_tok": 280,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000303",
+      "baseline": {
+        "e2e": 0.865670480998233,
+        "gen": 0.7277749928180128,
+        "in_tok": 159,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9313264840748161,
+        "gen": 0.7903901471290737,
+        "in_tok": 310,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000304",
+      "baseline": {
+        "e2e": 0.8112919901032001,
+        "gen": 0.6789438929408789,
+        "in_tok": 146,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.1886853708419949,
+        "gen": 1.0423304138239473,
+        "in_tok": 302,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000305",
+      "baseline": {
+        "e2e": 1.204200205160305,
+        "gen": 1.0667243429925293,
+        "in_tok": 133,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9561995989643037,
+        "gen": 0.788979260949418,
+        "in_tok": 289,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000309",
+      "baseline": {
+        "e2e": 0.7203111068811268,
+        "gen": 0.5824272269383073,
+        "in_tok": 134,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.2994553002063185,
+        "gen": 1.0498039741069078,
+        "in_tok": 289,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000310",
+      "baseline": {
+        "e2e": 0.935592939844355,
+        "gen": 0.7904146839864552,
+        "in_tok": 138,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9563055690377951,
+        "gen": 0.8108540358953178,
+        "in_tok": 292,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000315",
+      "baseline": {
+        "e2e": 0.5928485780023038,
+        "gen": 0.4786233559716493,
+        "in_tok": 113,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8437577451113611,
+        "gen": 0.7208405509591103,
+        "in_tok": 266,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000322",
+      "baseline": {
+        "e2e": 0.7102234240155667,
+        "gen": 0.575353145133704,
+        "in_tok": 122,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.6691705251578242,
+        "gen": 0.530323649989441,
+        "in_tok": 248,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000326",
+      "baseline": {
+        "e2e": 1.1181183599401265,
+        "gen": 0.9728366830386221,
+        "in_tok": 177,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.660834567155689,
+        "gen": 1.4955692449584603,
+        "in_tok": 349,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000328",
+      "baseline": {
+        "e2e": 0.7187241551000625,
+        "gen": 0.5832509419415146,
+        "in_tok": 149,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.036768542136997,
+        "gen": 0.8936902089044452,
+        "in_tok": 309,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000330",
+      "baseline": {
+        "e2e": 0.49180796882137656,
+        "gen": 0.35723589989356697,
+        "in_tok": 119,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.5580746619962156,
+        "gen": 0.39913657517172396,
+        "in_tok": 261,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000333",
+      "baseline": {
+        "e2e": 0.7970956009812653,
+        "gen": 0.6613384000957012,
+        "in_tok": 124,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.9070822049397975,
+        "gen": 0.767392867943272,
+        "in_tok": 269,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000340",
+      "baseline": {
+        "e2e": 1.0131309879943728,
+        "gen": 0.8794981190003455,
+        "in_tok": 122,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.0318723490927368,
+        "gen": 0.8924891180358827,
+        "in_tok": 269,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000341",
+      "baseline": {
+        "e2e": 1.3352724709548056,
+        "gen": 1.196574506815523,
+        "in_tok": 147,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.144772965926677,
+        "gen": 0.9102647518739104,
+        "in_tok": 285,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000342",
+      "baseline": {
+        "e2e": 0.8729991428554058,
+        "gen": 0.7089725309051573,
+        "in_tok": 118,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.8810371069703251,
+        "gen": 0.7220230328384787,
+        "in_tok": 249,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000343",
+      "baseline": {
+        "e2e": 1.2011013110168278,
+        "gen": 1.0637027760967612,
+        "in_tok": 147,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 1.132196290884167,
+        "gen": 0.9904628701042384,
+        "in_tok": 303,
+        "out_tok": null
+      }
+    },
+    {
+      "id": "SparseLibriMix2_noisy_000344",
+      "baseline": {
+        "e2e": 0.5368906231597066,
+        "gen": 0.41370423906482756,
+        "in_tok": 110,
+        "out_tok": null
+      },
+      "agsc": {
+        "e2e": 0.5505265928804874,
+        "gen": 0.42985462094657123,
+        "in_tok": 219,
+        "out_tok": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# ============================================================
+# Omni-Context .gitignore
+# GitHub 仓库仅托管代码 / 配置 / 报告 / README
+# 大型二进制资产（音频、模型权重、数据集）上传至 HuggingFace
+# ============================================================
+
+# ---------- 大型二进制资产（上传到 HuggingFace）----------
+Omni-Context-DataSet/
+benchmarks/_wav/
+benchmarks/_wham/
+checkpoints/
+datasets/
+results/bench_raw/
+results/raw/
+*.wav
+*.flac
+*.mp3
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# ---------- Python ----------
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ---------- 编辑器 / 系统 ----------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ---------- 日志 ----------
+logs/
+*.log
+
+# ---------- 临时文件 ----------
+*.tmp
+*.bak

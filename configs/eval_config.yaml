@@ -1,0 +1,28 @@
+# Omni-Context 零样本评测配置
+dataset_root: /cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet
+project_root: /cpfs_speech3/yulian.zpf/Omni-Context
+
+# 评测子集（由 sampling.py 生成）
+subset_path: /cpfs_speech3/yulian.zpf/Omni-Context/subsets/eval_subset_600.jsonl
+subset_size: 600
+sampling_seed: 20260604
+# 仅从 test split 抽样（dev 保留给后续训练调参）
+sampling_split: test
+
+# 对比条件
+conditions: [E0, E1, E2]   # E0=audio_only, E1=audio+asr, E2=audio+xml_gt
+
+# 生成参数
+max_new_tokens: 512
+do_sample: false           # greedy，保证可复现
+temperature: 0.0
+
+# 模型目录
+models:
+  qwen3_omni:
+    path: /cpfs_speech3/yulian.zpf/Qwen3-Omni-30B-A3B-Instruct
+  minicpm_o:
+    path: /cpfs_speech3/yulian.zpf/MiniCPM-o-4_5
+  ming:
+    path: /cpfs_speech3/yulian.zpf/Ming                 # 自带建模代码目录
+    weights: /cpfs_speech3/yulian.zpf/Ming/Ming-flash-omni-2.0

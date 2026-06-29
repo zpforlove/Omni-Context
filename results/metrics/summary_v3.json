@@ -1,0 +1,104 @@
+{
+  "qwen3_omni": {
+    "speaker_count": {
+      "Raw_real": 1.0,
+      "Raw_silent": 1.0,
+      "AC_raw": 0.0,
+      "Gated_real": 0.9333333333333333,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.9333333333333333
+    },
+    "snr_bucket": {
+      "Raw_real": 1.0,
+      "Raw_silent": 1.0,
+      "AC_raw": 0.0,
+      "Gated_real": 0.23333333333333334,
+      "Gated_silent": 0.22,
+      "AC_gated": 0.013333333333333336
+    },
+    "primary_transcript": {
+      "Raw_real": 1.0,
+      "Raw_silent": 1.0,
+      "AC_raw": 0.0,
+      "Gated_real": 0.74,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.74
+    },
+    "environment_caption": {
+      "Raw_real": 0.7666666666666667,
+      "Raw_silent": 0.8133333333333334,
+      "AC_raw": -0.046666666666666634,
+      "Gated_real": 0.0,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.0
+    }
+  },
+  "minicpm_o": {
+    "speaker_count": {
+      "Raw_real": 1.0,
+      "Raw_silent": 1.0,
+      "AC_raw": 0.0,
+      "Gated_real": 0.6533333333333333,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.6533333333333333
+    },
+    "snr_bucket": {
+      "Raw_real": 0.9933333333333333,
+      "Raw_silent": 0.9933333333333333,
+      "AC_raw": 0.0,
+      "Gated_real": 0.2866666666666667,
+      "Gated_silent": 0.18666666666666668,
+      "AC_gated": 0.1
+    },
+    "primary_transcript": {
+      "Raw_real": 0.9866666666666667,
+      "Raw_silent": 1.0,
+      "AC_raw": -0.013333333333333308,
+      "Gated_real": 0.5933333333333334,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.5933333333333334
+    },
+    "environment_caption": {
+      "Raw_real": 0.8066666666666666,
+      "Raw_silent": 0.6333333333333333,
+      "AC_raw": 0.17333333333333334,
+      "Gated_real": 0.0,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.0
+    }
+  },
+  "ming": {
+    "speaker_count": {
+      "Raw_real": 1.0,
+      "Raw_silent": 1.0,
+      "AC_raw": 0.0,
+      "Gated_real": 0.84,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.84
+    },
+    "snr_bucket": {
+      "Raw_real": 0.9933333333333333,
+      "Raw_silent": 1.0,
+      "AC_raw": -0.00666666666666671,
+      "Gated_real": 0.24,
+      "Gated_silent": 0.23333333333333334,
+      "AC_gated": 0.006666666666666654
+    },
+    "primary_transcript": {
+      "Raw_real": 0.9933333333333333,
+      "Raw_silent": 1.0,
+      "AC_raw": -0.00666666666666671,
+      "Gated_real": 0.34,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.34
+    },
+    "environment_caption": {
+      "Raw_real": 0.44666666666666666,
+      "Raw_silent": 0.49333333333333335,
+      "AC_raw": -0.04666666666666669,
+      "Gated_real": 0.0,
+      "Gated_silent": 0.0,
+      "AC_gated": 0.0
+    }
+  }
+}

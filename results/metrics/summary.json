@@ -1,0 +1,209 @@
+{
+  "ming": {
+    "E0": {
+      "composite_acc": 0.40149104962856175,
+      "speaker_count_acc": 0.5566666666666666,
+      "speaker_attribution_acc": 0.36333333333333334,
+      "transcript_acc": 0.5843441751556824,
+      "caption_rougeL": 0.10359128079333829,
+      "snr_acc": 0.21666666666666667,
+      "n_samples": 600,
+      "cer_all": 0.6403273802124667,
+      "cer_ms": 1.2283732489703845,
+      "cer_se": 0.052281511454549526
+    },
+    "E1": {
+      "composite_acc": 0.7156306202397493,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.9755024519325991,
+      "caption_rougeL": 0.09277881757330596,
+      "snr_acc": 0.25,
+      "n_samples": 600,
+      "cer_all": 0.04674346881332175,
+      "cer_ms": 0.07533009773450948,
+      "cer_se": 0.018156839892134007
+    },
+    "E2": {
+      "composite_acc": 0.9109641432127882,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.9949735743559274,
+      "caption_rougeL": 0.482504377231541,
+      "snr_acc": 0.9933333333333333,
+      "n_samples": 600,
+      "cer_all": 0.013763799381446437,
+      "cer_ms": 0.025746827246827243,
+      "cer_se": 0.0017807715160656334
+    },
+    "latency": {
+      "E0": 5.280730000000004,
+      "E1": 5.228435000000001,
+      "E2": 5.677586666666667
+    },
+    "go_nogo": [
+      {
+        "name": "E2 综合准确率 - E0",
+        "threshold": ">= +8pp",
+        "observed": "+50.9pp",
+        "pass": true
+      },
+      {
+        "name": "E2 综合准确率 - E1",
+        "threshold": ">= +3pp",
+        "observed": "+19.5pp",
+        "pass": true
+      },
+      {
+        "name": "Speaker Attribution (overlap>=0.3) E2-E0",
+        "threshold": ">= +10pp",
+        "observed": "+62.9pp",
+        "pass": true
+      },
+      {
+        "name": "Transcript acc (SNR<=5) E2-E0",
+        "threshold": ">= +8pp",
+        "observed": "+4.0pp",
+        "pass": false
+      }
+    ]
+  },
+  "minicpm_o": {
+    "E0": {
+      "composite_acc": 0.5335533479649783,
+      "speaker_count_acc": 0.6866666666666666,
+      "speaker_attribution_acc": 0.83,
+      "transcript_acc": 0.7800673333256285,
+      "caption_rougeL": 0.02451875447194869,
+      "snr_acc": 0.1,
+      "n_samples": 600,
+      "cer_all": 0.7048957104504037,
+      "cer_ms": 0.4282855796164621,
+      "cer_se": 0.9815058412843446
+    },
+    "E1": {
+      "composite_acc": 0.7057310450270708,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.9992342287342288,
+      "caption_rougeL": 0.032584479360635486,
+      "snr_acc": 0.20333333333333334,
+      "n_samples": 600,
+      "cer_all": 0.0007657712657712657,
+      "cer_ms": 0.000849002849002849,
+      "cer_se": 0.0006825396825396826
+    },
+    "E2": {
+      "composite_acc": 0.9683226982254178,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.9945476190476192,
+      "caption_rougeL": 0.8208409512572669,
+      "snr_acc": 1.0,
+      "n_samples": 600,
+      "cer_all": 0.01381547619047619,
+      "cer_ms": 0.026948412698412697,
+      "cer_se": 0.0006825396825396826
+    },
+    "latency": {
+      "E0": 1.277058333333332,
+      "E1": 1.376316666666667,
+      "E2": 1.8787816666666666
+    },
+    "go_nogo": [
+      {
+        "name": "E2 综合准确率 - E0",
+        "threshold": ">= +8pp",
+        "observed": "+43.5pp",
+        "pass": true
+      },
+      {
+        "name": "E2 综合准确率 - E1",
+        "threshold": ">= +3pp",
+        "observed": "+26.3pp",
+        "pass": true
+      },
+      {
+        "name": "Speaker Attribution (overlap>=0.3) E2-E0",
+        "threshold": ">= +10pp",
+        "observed": "+25.2pp",
+        "pass": true
+      },
+      {
+        "name": "Transcript acc (SNR<=5) E2-E0",
+        "threshold": ">= +8pp",
+        "observed": "+19.1pp",
+        "pass": true
+      }
+    ]
+  },
+  "qwen3_omni": {
+    "E0": {
+      "composite_acc": 0.6556565554157662,
+      "speaker_count_acc": 0.68,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.8975554217622466,
+      "caption_rougeL": 0.14549515563676763,
+      "snr_acc": 0.31333333333333335,
+      "n_samples": 600,
+      "cer_all": 0.1526834357496374,
+      "cer_ms": 0.2872149547791961,
+      "cer_se": 0.018151916720078654
+    },
+    "E1": {
+      "composite_acc": 0.7376436788391832,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 0.9966666666666667,
+      "transcript_acc": 0.9849629259629262,
+      "caption_rougeL": 0.14260288777591415,
+      "snr_acc": 0.31666666666666665,
+      "n_samples": 600,
+      "cer_all": 0.032247756872756876,
+      "cer_ms": 0.06151110926110926,
+      "cer_se": 0.0029844044844044844
+    },
+    "E2": {
+      "composite_acc": 0.9328709770374771,
+      "speaker_count_acc": 1.0,
+      "speaker_attribution_acc": 1.0,
+      "transcript_acc": 0.9916208513708515,
+      "caption_rougeL": 0.613984159483155,
+      "snr_acc": 1.0,
+      "n_samples": 600,
+      "cer_all": 0.01428192640692641,
+      "cer_ms": 0.02643803418803419,
+      "cer_se": 0.002125818625818626
+    },
+    "latency": {
+      "E0": 8.52031666666668,
+      "E1": 7.866498333333326,
+      "E2": 9.087485
+    },
+    "go_nogo": [
+      {
+        "name": "E2 综合准确率 - E0",
+        "threshold": ">= +8pp",
+        "observed": "+27.7pp",
+        "pass": true
+      },
+      {
+        "name": "E2 综合准确率 - E1",
+        "threshold": ">= +3pp",
+        "observed": "+19.5pp",
+        "pass": true
+      },
+      {
+        "name": "Speaker Attribution (overlap>=0.3) E2-E0",
+        "threshold": ">= +10pp",
+        "observed": "+0.0pp",
+        "pass": false
+      },
+      {
+        "name": "Transcript acc (SNR<=5) E2-E0",
+        "threshold": ">= +8pp",
+        "observed": "+2.2pp",
+        "pass": false
+      }
+    ]
+  }
+}

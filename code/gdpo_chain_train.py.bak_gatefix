@@ -1,0 +1,357 @@
+"""C3：全链路 GDPO 统一训练器（Gate-then-Transcribe）。--model qwen3_omni|minicpm_o|ming
+回合：流音频(mix/clean) + 随机成熟度线索(none/t2/t4/full) → 单次生成 [GATE行+转写]。
+三奖励：r_format / r_gate(Eq.8条件) / r_asr=1−cpWER(Eq.8条件)，GDPO 解耦归一化(Eq.4/6/7)。
+rollout：温度采样 G=4（MiniCPM 用 do_sample= 正确参数名；Qwen3/Ming 走 HF generate）。
+logprob：教师强制（与各自部署模板一致）。
+"""
+import argparse, json, os, random, sys, time, itertools, re
+sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+import numpy as np
+import torch
+ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+import run_bench_eval as RB
+from stream_gate_eval import perm_cpwer, render_clue, CONTRACT
+
+INSTR = ("First decide whether this audio contains an acoustically COMPLEX segment "
+         "(two or more people talking at the same time, or strong background noise): "
+         "output exactly one line 'GATE: COMPLEX' or 'GATE: CLEAN'. "
+         "Then transcribe ALL the speech from beginning to end, one speaker per line. "
+         "Output only the GATE line followed by the transcript lines.")
+
+
+def build_prompt(clue, span):
+    parts = []
+    if clue:
+        parts += [CONTRACT, "\n" + render_clue(clue, span) + "\n"]
+    parts.append(INSTR)
+    return "\n".join(parts)
+
+
+def parse_out(text):
+    lines = [l.strip() for l in (text or "").split("\n") if l.strip()]
+    gate, body = None, []
+    for i, l in enumerate(lines):
+        m = re.match(r"^GATE:\s*(COMPLEX|CLEAN)", l.upper().replace("：", ":"))
+        if m and gate is None:
+            gate = m.group(1); body = lines[i + 1:]
+            break
+    if gate is None:
+        body = lines
+    return gate, "\n".join(body)
+
+
+def zh_chars(s):
+    return " ".join(ch for ch in (s or "") if not ch.isspace())
+
+
+def rewards_for(text, kind, refs, cond_asr_on_gate=False, lang="en"):
+    gate, body = parse_out(text)
+    if lang == "zh":
+        refs = [zh_chars(r) for r in refs]
+        body = "\n".join(zh_chars(l) for l in body.split("\n"))
+    r_fmt = 1.0 if (gate is not None and body.strip()) else 0.0
+    truth = "COMPLEX" if kind == "mix" else "CLEAN"
+    r_gate = (1.0 if gate == truth else 0.0) * r_fmt
+    r_asr = (1.0 - min(1.0, perm_cpwer(refs, body))) * r_fmt
+    if cond_asr_on_gate:          # Eq.8: 易奖励(asr)条件在难奖励(gate)达标上, 防目标挤压
+        r_asr *= r_gate
+    return np.array([r_fmt, r_gate, r_asr], dtype=np.float64)
+
+
+def znorm(x, eps=1e-6):
+    x = np.asarray(x, dtype=np.float64)
+    return (x - x.mean()) / (x.std() + eps)
+
+
+# ------------------- per-model policies -------------------
+class McpmPolicy:
+    def __init__(self):
+        import importlib.util, librosa
+        spec = importlib.util.spec_from_file_location("tsm", ROOT + "/code/train_stage_n_minicpm.py")
+        tsm = importlib.util.module_from_spec(spec); sys.modules["tsm"] = tsm
+        spec.loader.exec_module(tsm)
+        self.model, self.proc, self.tok = tsm.load()
+        from peft import LoraConfig, get_peft_model
+        cfg = LoraConfig(r=8, lora_alpha=16, lora_dropout=0.0, bias="none", task_type="CAUSAL_LM",
+                         target_modules=r".*llm\.model\.layers\.\d+\.self_attn\.(q_proj|k_proj|v_proj|o_proj)")
+        self.peft = get_peft_model(self.model, cfg); self.peft.print_trainable_parameters()
+        self.base = self.peft.base_model.model
+        self.params = [p for p in self.peft.parameters() if p.requires_grad]
+        self.librosa = librosa
+
+    def _audio(self, wav):
+        a, _ = self.librosa.load(wav, sr=16000, mono=True)
+        return a
+
+    def sample(self, wav, prompt, T):
+        a = self._audio(wav)
+        msgs = [{"role": "user", "content": [prompt, a]}]
+        with torch.no_grad():
+            r = self.base.chat(msgs=msgs, tokenizer=self.tok, do_sample=True, temperature=T,
+                               max_new_tokens=220, use_tts_template=False, generate_audio=False)
+        return str(r.get("text", r) if isinstance(r, dict) else r).strip()
+
+    def _build(self, wav, prompt, target):
+        import numpy as _np
+        a = self._audio(wav)
+        msgs = [{"role": "user", "content": [prompt, a]},
+                {"role": "assistant", "content": [target]}]
+        audios, parts, copy = [], [], []
+        for i, m in enumerate(msgs):
+            cur = []
+            for c in m["content"]:
+                if isinstance(c, _np.ndarray):
+                    audios.append(c); parts.append(i); cur.append("<audio>./</audio>")
+                else:
+                    cur.append(str(c))
+            copy.append({"role": m["role"], "content": "".join(cur)})
+        text = self.proc.tokenizer.apply_chat_template(copy, tokenize=False, add_generation_prompt=False,
+                                                       use_tts_template=False, enable_thinking=False)
+        full = self.proc([text], [[]], [audios], [parts], return_tensors="pt").to(self.model.device)
+        ptext = self.proc.tokenizer.apply_chat_template(copy[:1], tokenize=False, add_generation_prompt=True,
+                                                        use_tts_template=False, enable_thinking=False)
+        prm = self.proc([ptext], [[]], [audios], [[0] * len(audios)]
+                        , return_tensors="pt").to(self.model.device)
+        return full, prm["input_ids"].shape[1]
+
+    def mean_logprob(self, wav, prompt, target):
+        full, plen = self._build(wav, prompt, target)
+        L = full["input_ids"].shape[1]
+        full["position_ids"] = torch.arange(L, device=full["input_ids"].device).unsqueeze(0)
+        labels = full["input_ids"].clone().long(); labels[:, :plen] = -100
+        out = self.base(full, labels=labels, attention_mask=full.get("attention_mask"))
+        return -(out.loss if hasattr(out, "loss") else out[0])
+
+    def save(self, outdir):
+        self.peft.save_pretrained(outdir)
+
+
+class Qwen3Policy:
+    def __init__(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("tsc", ROOT + "/code/train_stage_c.py")
+        tsc = importlib.util.module_from_spec(spec); sys.modules["tsc"] = tsc
+        spec.loader.exec_module(tsc)
+        self.tsc = tsc
+        model, proc, pmm = tsc.load_model()
+        model = tsc.add_lora(model)
+        self.model, self.proc, self.pmm = model, proc, pmm
+        self.thinker = model.thinker
+        if hasattr(self.thinker, "config"):
+            self.thinker.config.use_cache = False
+        self.dev = model.device if hasattr(model, "device") else torch.device("cuda:0")
+        self.params = [p for p in self.thinker.parameters() if p.requires_grad]
+
+    def sample(self, wav, prompt, T):
+        from common.prompts import SYS_PROMPT
+        conv = [{"role": "system", "content": [{"type": "text", "text": SYS_PROMPT}]},
+                {"role": "user", "content": [{"type": "audio", "audio": wav},
+                                             {"type": "text", "text": prompt}]}]
+        text = self.proc.apply_chat_template(conv, add_generation_prompt=True, tokenize=False)
+        audios, images, videos = self.pmm(conv, use_audio_in_video=False)
+        inputs = self.proc(text=text, audio=audios, images=images, videos=videos,
+                           return_tensors="pt", padding=True, use_audio_in_video=False)
+        inputs = inputs.to(self.dev).to(self.model.dtype)
+        self.thinker.config.use_cache = True
+        with torch.no_grad():
+            out = self.model.generate(**inputs, max_new_tokens=220, do_sample=True, temperature=T,
+                                      top_p=0.95, return_audio=False, use_audio_in_video=False)
+        self.thinker.config.use_cache = False
+        tids = out[0] if isinstance(out, (tuple, list)) else out
+        gen = tids[:, inputs["input_ids"].shape[1]:]
+        return self.proc.batch_decode(gen, skip_special_tokens=True)[0].strip()
+
+    def mean_logprob(self, wav, prompt, target):
+        ex = {"audio_path": wav, "prompt": prompt, "target": target}
+        inputs = self.tsc.build_inputs(ex, self.proc, self.pmm)
+        inputs = {k: (v.to(self.dev) if hasattr(v, "to") else v) for k, v in inputs.items()}
+        if inputs.get("input_features") is not None:
+            inputs["input_features"] = inputs["input_features"].to(self.model.dtype)
+        out = self.thinker(**inputs)
+        return -out.loss
+
+    def save(self, outdir):
+        self.thinker.save_pretrained(outdir)
+
+
+class MingPolicy:
+    def __init__(self):
+        import yaml, importlib.util
+        from run_eval import get_adapter
+        spec = importlib.util.spec_from_file_location("tnm", ROOT + "/code/train_stage_n_ming.py")
+        tnm = importlib.util.module_from_spec(spec); sys.modules["tnm"] = tnm
+        spec.loader.exec_module(tnm)
+        self.tnm = tnm
+        cfg = yaml.safe_load(open(ROOT + "/configs/eval_config.yaml"))
+        adapter = get_adapter("ming", cfg["models"]["ming"]); adapter.load()
+        from peft import LoraConfig, get_peft_model
+        lcfg = LoraConfig(r=8, lora_alpha=16, lora_dropout=0.0, bias="none", task_type=None,
+                          target_modules=r".*layers\.\d+\.attention\.(query_key_value|dense)")
+        self.peft = get_peft_model(adapter.model, lcfg); self.peft.print_trainable_parameters()
+        for c in (getattr(adapter.model, "config", None), getattr(adapter.model.model, "config", None)):
+            if c is not None and hasattr(c, "use_cache"):
+                c.use_cache = False
+        self.adapter = adapter
+        self.params = [p for p in self.peft.parameters() if p.requires_grad]
+
+    def sample(self, wav, prompt, T):
+        proc = self.adapter.processor
+        messages = [{"role": "HUMAN", "content": [{"type": "text", "text": prompt},
+                                                  {"type": "audio", "audio": wav}]}]
+        text = proc.apply_chat_template(messages, sys_prompt_exp=None, use_cot_system_prompt=False)
+        img, vid, aud = proc.process_vision_info(messages)
+        inputs = proc(text=[text], images=img, videos=vid, audios=aud,
+                      audio_kwargs={"use_whisper_encoder": True}, return_tensors="pt").to("cuda:0")
+        for k in list(inputs.keys()):
+            if k in ("pixel_values", "audio_feats"):
+                inputs[k] = inputs[k].to(torch.bfloat16)
+        with torch.no_grad():
+            gen = self.adapter.model.generate(**inputs, max_new_tokens=220, use_cache=True,
+                                              do_sample=True, temperature=T, top_p=0.95,
+                                              eos_token_id=proc.gen_terminator, num_logits_to_keep=1)
+        trimmed = [o[len(i):] for i, o in zip(inputs.input_ids, gen)]
+        return proc.batch_decode(trimmed, skip_special_tokens=True)[0].strip()
+
+    def mean_logprob(self, wav, prompt, target):
+        full, labels = self.tnm.build_train(self.adapter, wav, prompt, target)
+        full = full.to("cuda:0"); labels = labels.to("cuda:0")
+        for k in list(full.keys()):
+            if k in ("audio_feats", "pixel_values"):
+                full[k] = full[k].to(torch.bfloat16)
+        with torch.autocast("cuda", dtype=torch.bfloat16):
+            ae, ael = self.adapter.model.extract_audio_feature(
+                full["audio_feats"], full["audio_feats_lengths"], use_whisper_encoder=True)
+            out = self.adapter.model.model(
+                input_ids=full["input_ids"], attention_mask=full.get("attention_mask"),
+                query_embeds_audio=ae, query_embeds_audio_lengths=ael,
+                placeholder_audio_loc_lens=full["audio_placeholder_loc_lens"], use_cache=False)
+        logits = (out.logits if hasattr(out, "logits") else out[0]).float()
+        lab = labels.to(logits.device)
+        sl = logits[:, :-1, :].reshape(-1, logits.shape[-1])
+        st = lab[:, 1:].reshape(-1)
+        ce = torch.nn.functional.cross_entropy(sl, st, ignore_index=-100)
+        return -ce
+
+    def save(self, outdir):
+        os.makedirs(outdir, exist_ok=True)
+        self.peft.save_pretrained(outdir)
+
+
+POLICIES = {"minicpm_o": McpmPolicy, "qwen3_omni": Qwen3Policy, "ming": MingPolicy}
+CK_NAME = {"minicpm_o": "minicpm", "qwen3_omni": "qwen3", "ming": "ming"}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", required=True, choices=list(POLICIES))
+    ap.add_argument("--algo", choices=["gdpo", "grpo"], default="gdpo")
+    ap.add_argument("--G", type=int, default=4)
+    ap.add_argument("--epochs", type=int, default=1)
+    ap.add_argument("--lr", type=float, default=4e-5)
+    ap.add_argument("--temp", type=float, default=1.1)
+    ap.add_argument("--batch_eps", type=int, default=4)
+    ap.add_argument("--weights", default="1.0,1.0,2.0")
+    ap.add_argument("--smoke", type=int, default=0)
+    ap.add_argument("--cond_asr", action="store_true")
+    ap.add_argument("--data", choices=["chain", "csb"], default="chain")
+    ap.add_argument("--eps_cap", type=int, default=0)
+    ap.add_argument("--resume_lora", default="", help="从已存 LoRA 续训(热启动)")
+    a = ap.parse_args()
+    W = np.array([float(x) for x in a.weights.split(",")])
+
+    src_file = "gdpo_chain_train.jsonl" if a.data == "chain" else "csb_train.jsonl"
+    rows = [json.loads(l) for l in open(ROOT + f"/benchmarks/_agsc/{src_file}") if l.strip()]
+    eps = []
+    rng = random.Random(20260611)
+    for r in rows:
+        lang = r.get("lang", "en")
+        if r["kind"] == "mix":
+            refs = [r["ref_clean_a"]] + r["ref_spk"] + [r["ref_clean_b"]]
+            mat = rng.choice(["none", "t2", "t4", "full"])
+            if a.data == "csb":
+                clue = None if mat == "none" else (r.get("context", {}).get(f"clue_{mat}") or None)
+            else:
+                clue = None if mat == "none" else r.get(f"clue_{mat}" if mat != "full" else "clue_full") or None
+            span = (int(r["complex_start"]), int(r["complex_end"])) if clue else None
+            eps.append({"wav": r["wav"], "kind": "mix", "refs": refs, "clue": clue, "span": span, "lang": lang})
+        elif r["kind"] == "clean":
+            eps.append({"wav": r["wav"], "kind": "clean", "refs": r["ref_clean"], "clue": None, "span": None, "lang": lang})
+    rng.shuffle(eps)
+    if a.eps_cap:
+        eps = eps[: a.eps_cap]
+    if a.smoke:
+        eps = eps[: a.smoke]
+    print(f"[{a.model}/{a.algo}] {len(eps)} episodes G={a.G} T={a.temp}", flush=True)
+
+    pol = POLICIES[a.model]()
+    if a.resume_lora and os.path.exists(a.resume_lora):
+        import safetensors.torch as st_
+        sd = st_.load_file(os.path.join(a.resume_lora, "adapter_model.safetensors"))
+        sd = { (k.replace("lora_A.weight", "lora_A.default.weight")
+                 .replace("lora_B.weight", "lora_B.default.weight")): v for k, v in sd.items() }
+        tgt = (pol.thinker if a.model == "qwen3_omni" else (pol.peft if hasattr(pol, "peft") else None))
+        if tgt is not None:
+            missing, unexpected = tgt.load_state_dict(sd, strict=False)
+            loaded = len(sd) - len(unexpected)
+            print(f"[resume] loaded {loaded}/{len(sd)} lora tensors from {a.resume_lora}", flush=True)
+    opt = torch.optim.AdamW(pol.params, lr=a.lr)
+    logf = open(ROOT + f"/results/gdpo_{a.data}_{a.model}_{a.algo}.log.jsonl", "a", encoding="utf-8")
+    gstep = 0
+    for epoch in range(a.epochs):
+        rng.shuffle(eps)
+        for bi in range(0, len(eps), a.batch_eps):
+            batch = eps[bi: bi + a.batch_eps]
+            entries, stats = [], {"fmt": [], "gate": [], "asr": []}
+            for e in batch:
+                prompt = build_prompt(e["clue"], e["span"])
+                try:
+                    outs = [pol.sample(e["wav"], prompt, a.temp) for _ in range(a.G)]
+                except Exception as ex:
+                    print("  [skip-sample]", repr(ex)[:120], flush=True); continue
+                Rm = np.stack([rewards_for(o, e["kind"], e["refs"], a.cond_asr, e.get("lang", "en")) for o in outs])
+                if a.algo == "gdpo":
+                    A = sum(W[j] * znorm(Rm[:, j]) for j in range(Rm.shape[1]))
+                else:
+                    A = znorm((Rm * W).sum(axis=1))
+                entries.append((e, prompt, outs, A))
+                stats["fmt"].append(Rm[:, 0].mean()); stats["gate"].append(Rm[:, 1].mean()); stats["asr"].append(Rm[:, 2].mean())
+            if not entries:
+                continue
+            allA = np.concatenate([x[3] for x in entries])
+            if a.algo == "gdpo":
+                m, s = allA.mean(), allA.std() + 1e-6
+            opt.zero_grad()
+            n_terms = sum(len(x[2]) for x in entries)
+            loss_val = 0.0
+            for e, prompt, outs, A in entries:
+                for o, adv in zip(outs, A):
+                    if a.algo == "gdpo":
+                        adv = (adv - m) / s
+                    if abs(adv) < 1e-9 or not o.strip():
+                        continue
+                    try:
+                        lp = pol.mean_logprob(e["wav"], prompt, o)
+                    except Exception as ex:
+                        print("  [skip-lp]", repr(ex)[:100], flush=True); continue
+                    loss = -float(adv) * lp / n_terms
+                    loss.backward()
+                    loss_val += float(loss.detach())
+            g = torch.nn.utils.clip_grad_norm_(pol.params, 1.0)
+            opt.step()
+            gstep += 1
+            rec = {"step": gstep, "epoch": epoch, "loss": loss_val,
+                   "fmt": float(np.mean(stats["fmt"])), "gate": float(np.mean(stats["gate"])),
+                   "asr": float(np.mean(stats["asr"])), "gnorm": float(g)}
+            logf.write(json.dumps(rec) + "\n"); logf.flush()
+            if gstep % 2 == 0:
+                print(f"[{a.model}/{a.algo}] step{gstep} loss={loss_val:.4f} fmt={rec['fmt']:.2f} "
+                      f"gate={rec['gate']:.2f} asr={rec['asr']:.3f} gnorm={rec['gnorm']:.2f}", flush=True)
+            if gstep % 10 == 0:
+                pol.save(ROOT + f"/checkpoints/{CK_NAME[a.model]}_" + ("csb" if a.data == "csb" else "chain") + "_lora" + ("_v2" if (a.cond_asr and a.data == "chain") else ""))
+        pol.save(ROOT + f"/checkpoints/{CK_NAME[a.model]}_" + ("csb" if a.data == "csb" else "chain") + "_lora" + ("_v2" if (a.cond_asr and a.data == "chain") else ""))
+        print(f"[{a.model}] epoch{epoch} saved", flush=True)
+    print(f"DONE chain {a.model} {a.algo}")
+
+
+if __name__ == "__main__":
+    main()

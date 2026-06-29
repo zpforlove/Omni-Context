@@ -1,0 +1,22 @@
+{
+  "qwen3_omni": {
+    "T1_who_said_what": {
+      "NoCtx_real": 0.12580724708827098,
+      "AGSC_real": 0.1220875735615413,
+      "AGSC_silent": 1.0037835523954926,
+      "GCG": 0.0037196735267296804
+    },
+    "T2_targeted_transcript": {
+      "NoCtx_real": 0.02411256738330005,
+      "AGSC_real": 0.023412632528950324,
+      "AGSC_silent": 0.9923684118122725,
+      "GCG": 0.0006999348543497257
+    },
+    "T3_speaker_count": {
+      "NoCtx_real": 0.62,
+      "AGSC_real": 0.6266666666666667,
+      "AGSC_silent": 0.0,
+      "GCG": 0.00666666666666671
+    }
+  }
+}

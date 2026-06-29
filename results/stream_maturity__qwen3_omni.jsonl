@@ -1,0 +1,440 @@
+{"id": "SparseLibriMix2_noisy_000004", "tag": "base", "cond": "baseline", "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "base", "cond": "baseline", "cpwer": 0.3008695652173913}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "base", "cond": "baseline", "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "base", "cond": "baseline", "cpwer": 0.1426470588235294}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "base", "cond": "baseline", "cpwer": 0.25400457665903886}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "base", "cond": "baseline", "cpwer": 0.5711538461538461}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "base", "cond": "baseline", "cpwer": 0.2844611528822055}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "base", "cond": "baseline", "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "base", "cond": "baseline", "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "base", "cond": "baseline", "cpwer": 0.24895833333333334}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "base", "cond": "baseline", "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "base", "cond": "baseline", "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "base", "cond": "baseline", "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "base", "cond": "baseline", "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "base", "cond": "baseline", "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "base", "cond": "baseline", "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "base", "cond": "baseline", "cpwer": 0.14285714285714285}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "base", "cond": "baseline", "cpwer": 0.5602564102564103}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "base", "cond": "baseline", "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "base", "cond": "baseline", "cpwer": 0.5868055555555556}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "base", "cond": "baseline", "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "base", "cond": "baseline", "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "base", "cond": "baseline", "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "base", "cond": "baseline", "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 13, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.275}
+{"id": "SparseLibriMix2_noisy_000004", "tag": "full", "t": 9.0, "cond": "agsc", "n_kw": 17, "cpwer": 0.7618421052631579}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.3008695652173913}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.2573913043478261}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 12, "cpwer": 0.3443478260869565}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 12, "cpwer": 0.3443478260869565}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 16, "cpwer": 0.32260869565217387}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 20, "cpwer": 0.2573913043478261}
+{"id": "SparseLibriMix2_noisy_000005", "tag": "t9.2", "t": 9.2, "cond": "agsc", "n_kw": 20, "cpwer": 0.3660869565217391}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000018", "tag": "t12.3", "t": 12.3, "cond": "agsc", "n_kw": 20, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.1426470588235294}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.08382352941176471}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.1426470588235294}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.08382352941176471}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.08382352941176471}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.1426470588235294}
+{"id": "SparseLibriMix2_noisy_000021", "tag": "t11.7", "t": 11.7, "cond": "agsc", "n_kw": 20, "cpwer": 0.1426470588235294}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.25400457665903886}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.25400457665903886}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.25400457665903886}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.25400457665903886}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.2757437070938215}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 10, "cpwer": 0.2757437070938215}
+{"id": "SparseLibriMix2_noisy_000033", "tag": "full", "t": 11.7, "cond": "agsc", "n_kw": 16, "cpwer": 0.42448512585812354}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.5711538461538461}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.5711538461538461}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.75}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.5961538461538461}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.75}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 15, "cpwer": 0.5961538461538461}
+{"id": "SparseLibriMix2_noisy_000045", "tag": "full", "t": 8.2, "cond": "agsc", "n_kw": 15, "cpwer": 0.75}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.33709273182957394}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.2844611528822055}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.2844611528822055}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.33709273182957394}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 0.2844611528822055}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.20551378446115287}
+{"id": "SparseLibriMix2_noisy_000048", "tag": "full", "t": 9.6, "cond": "agsc", "n_kw": 19, "cpwer": 0.33709273182957394}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 9, "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000049", "tag": "t8.7", "t": 8.7, "cond": "agsc", "n_kw": 18, "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.11764705882352941}
+{"id": "SparseLibriMix2_noisy_000050", "tag": "full", "t": 13.6, "cond": "agsc", "n_kw": 19, "cpwer": 0.6764705882352942}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.24895833333333334}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.24895833333333334}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.24895833333333334}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.16458333333333333}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 0.26458333333333334}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 15, "cpwer": 0.24895833333333334}
+{"id": "SparseLibriMix2_noisy_000056", "tag": "full", "t": 9.8, "cond": "agsc", "n_kw": 16, "cpwer": 0.26458333333333334}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.14772727272727273}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 20, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000061", "tag": "full", "t": 8.4, "cond": "agsc", "n_kw": 14, "cpwer": 0.23863636363636365}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 9, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 10, "cpwer": 0.1111111111111111}
+{"id": "SparseLibriMix2_noisy_000067", "tag": "full", "t": 12.5, "cond": "agsc", "n_kw": 14, "cpwer": 0.17222222222222222}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 9, "cpwer": 0.21052631578947367}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 13, "cpwer": 0.42105263157894735}
+{"id": "SparseLibriMix2_noisy_000071", "tag": "t10.5", "t": 10.5, "cond": "agsc", "n_kw": 18, "cpwer": 0.13157894736842105}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.29248366013071897}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.43137254901960786}
+{"id": "SparseLibriMix2_noisy_000073", "tag": "full", "t": 12.0, "cond": "agsc", "n_kw": 16, "cpwer": 0.4607843137254902}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 0, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 12, "cpwer": 0.3416666666666667}
+{"id": "SparseLibriMix2_noisy_000075", "tag": "full", "t": 9.6, "cond": "agsc", "n_kw": 15, "cpwer": 0.3666666666666667}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.25}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 15, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.2777777777777778}
+{"id": "SparseLibriMix2_noisy_000077", "tag": "full", "t": 9.0, "cond": "agsc", "n_kw": 19, "cpwer": 0.4444444444444444}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.21428571428571427}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.19642857142857142}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.3392857142857143}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 12, "cpwer": 0.17857142857142858}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.14285714285714285}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.19642857142857142}
+{"id": "SparseLibriMix2_noisy_000079", "tag": "full", "t": 11.7, "cond": "agsc", "n_kw": 19, "cpwer": 0.17857142857142858}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.5602564102564103}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.5602564102564103}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.5602564102564103}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.6602564102564102}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.6269230769230769}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.632051282051282}
+{"id": "SparseLibriMix2_noisy_000083", "tag": "full", "t": 9.5, "cond": "agsc", "n_kw": 14, "cpwer": 0.6653846153846154}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 9, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.1800595238095238}
+{"id": "SparseLibriMix2_noisy_000087", "tag": "t11.1", "t": 11.1, "cond": "agsc", "n_kw": 18, "cpwer": 0.22767857142857142}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.5590277777777778}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.5868055555555556}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.5868055555555556}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.5868055555555556}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.5868055555555556}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.5590277777777778}
+{"id": "SparseLibriMix2_noisy_000088", "tag": "full", "t": 8.1, "cond": "agsc", "n_kw": 17, "cpwer": 0.5590277777777778}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 13, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 13, "cpwer": 0.13078703703703703}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000100", "tag": "t10.0", "t": 10.0, "cond": "agsc", "n_kw": 19, "cpwer": 0.03125}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.125}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000108", "tag": "full", "t": 8.5, "cond": "agsc", "n_kw": 16, "cpwer": 0.041666666666666664}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 8, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 10, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 12, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000110", "tag": "t9.1", "t": 9.1, "cond": "agsc", "n_kw": 16, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 15, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000112", "tag": "full", "t": 13.2, "cond": "agsc", "n_kw": 20, "cpwer": 0.06270903010033445}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "base", "cond": "baseline", "cpwer": 0.47363636363636363}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "base", "cond": "baseline", "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "base", "cond": "baseline", "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "base", "cond": "baseline", "cpwer": 0.6956521739130435}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "base", "cond": "baseline", "cpwer": 0.1875}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "base", "cond": "baseline", "cpwer": 0.9115942028985508}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "base", "cond": "baseline", "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "base", "cond": "baseline", "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "base", "cond": "baseline", "cpwer": 0.19444444444444445}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "base", "cond": "baseline", "cpwer": 0.7096774193548387}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "base", "cond": "baseline", "cpwer": 0.2822966507177033}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "base", "cond": "baseline", "cpwer": 0.7333333333333334}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "base", "cond": "baseline", "cpwer": 0.8333333333333333}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "base", "cond": "baseline", "cpwer": 0.34285714285714286}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "base", "cond": "baseline", "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "base", "cond": "baseline", "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "base", "cond": "baseline", "cpwer": 0.21693121693121692}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "base", "cond": "baseline", "cpwer": 0.4917763157894737}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "base", "cond": "baseline", "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "base", "cond": "baseline", "cpwer": 0.3004807692307692}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "base", "cond": "baseline", "cpwer": 0.023809523809523808}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "base", "cond": "baseline", "cpwer": 0.15612648221343872}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "base", "cond": "baseline", "cpwer": 0.06458333333333333}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "base", "cond": "baseline", "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "base", "cond": "baseline", "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "base", "cond": "baseline", "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "base", "cond": "baseline", "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "base", "cond": "baseline", "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "base", "cond": "baseline", "cpwer": 0.07142857142857142}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "base", "cond": "baseline", "cpwer": 0.22523219814241485}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "base", "cond": "baseline", "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.49363636363636365}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.49363636363636365}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.49363636363636365}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.5163636363636364}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.5163636363636364}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.5872727272727273}
+{"id": "SparseLibriMix2_noisy_000117", "tag": "t10.3", "t": 10.3, "cond": "agsc", "n_kw": 19, "cpwer": 0.5872727272727273}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.06944444444444445}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000118", "tag": "full", "t": 13.8, "cond": "agsc", "n_kw": 18, "cpwer": 0.05555555555555555}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.23647058823529413}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000125", "tag": "full", "t": 12.1, "cond": "agsc", "n_kw": 18, "cpwer": 0.26588235294117646}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.15}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.6956521739130435}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 1.1}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.15}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 1.1}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.6956521739130435}
+{"id": "SparseLibriMix2_noisy_000136", "tag": "full", "t": 10.5, "cond": "agsc", "n_kw": 15, "cpwer": 0.6956521739130435}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.09375}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.1875}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.09375}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.1875}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.875}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.09375}
+{"id": "SparseLibriMix2_noisy_000139", "tag": "full", "t": 8.8, "cond": "agsc", "n_kw": 16, "cpwer": 0.8125}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.9115942028985508}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.9115942028985508}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.6507246376811594}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.12173913043478261}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.1}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.7710144927536232}
+{"id": "SparseLibriMix2_noisy_000140", "tag": "t11.1", "t": 11.1, "cond": "agsc", "n_kw": 19, "cpwer": 0.9115942028985508}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 12, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000147", "tag": "t8.6", "t": 8.6, "cond": "agsc", "n_kw": 14, "cpwer": 0.14646464646464646}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 15, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000152", "tag": "t9.4", "t": 9.4, "cond": "agsc", "n_kw": 15, "cpwer": 0.08333333333333333}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.19444444444444445}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.19444444444444445}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.16666666666666666}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.16666666666666666}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.16666666666666666}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.16666666666666666}
+{"id": "SparseLibriMix2_noisy_000155", "tag": "t9.2", "t": 9.2, "cond": "agsc", "n_kw": 17, "cpwer": 0.16666666666666666}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.21313364055299538}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.21313364055299538}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.2292626728110599}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 1.164746543778802}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 0.7096774193548387}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 1.164746543778802}
+{"id": "SparseLibriMix2_noisy_000161", "tag": "t10.2", "t": 10.2, "cond": "agsc", "n_kw": 18, "cpwer": 1.164746543778802}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.2822966507177033}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.23684210526315788}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.2822966507177033}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.23684210526315788}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.2822966507177033}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.23684210526315788}
+{"id": "SparseLibriMix2_noisy_000164", "tag": "full", "t": 10.1, "cond": "agsc", "n_kw": 16, "cpwer": 0.23684210526315788}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.35595238095238096}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000169", "tag": "full", "t": 9.1, "cond": "agsc", "n_kw": 16, "cpwer": 0.2845238095238095}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.6527777777777778}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.6527777777777778}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.6527777777777778}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.7025462962962963}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.7337962962962963}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.8703703703703703}
+{"id": "SparseLibriMix2_noisy_000171", "tag": "full", "t": 8.7, "cond": "agsc", "n_kw": 17, "cpwer": 0.7650462962962963}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.3904761904761905}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.41428571428571426}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.3904761904761905}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.41428571428571426}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.41428571428571426}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.3904761904761905}
+{"id": "SparseLibriMix2_noisy_000176", "tag": "t9.5", "t": 9.5, "cond": "agsc", "n_kw": 15, "cpwer": 0.36666666666666664}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.12380952380952381}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.09047619047619047}
+{"id": "SparseLibriMix2_noisy_000183", "tag": "full", "t": 9.3, "cond": "agsc", "n_kw": 17, "cpwer": 0.12380952380952381}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.10526315789473684}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000190", "tag": "full", "t": 8.7, "cond": "agsc", "n_kw": 18, "cpwer": 0.18421052631578946}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.1455026455026455}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.24074074074074073}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.12169312169312169}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.24074074074074073}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.24074074074074073}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.12169312169312169}
+{"id": "SparseLibriMix2_noisy_000217", "tag": "full", "t": 13.6, "cond": "agsc", "n_kw": 20, "cpwer": 0.12169312169312169}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.4917763157894737}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.4917763157894737}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.4917763157894737}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.8898026315789473}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 0.6233552631578947}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.6233552631578947}
+{"id": "SparseLibriMix2_noisy_000218", "tag": "full", "t": 9.6, "cond": "agsc", "n_kw": 18, "cpwer": 0.4917763157894737}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 8, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000226", "tag": "full", "t": 11.3, "cond": "agsc", "n_kw": 17, "cpwer": 0.029411764705882353}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.3004807692307692}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.3004807692307692}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.7668269230769231}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.6658653846153846}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 0.6346153846153846}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 17, "cpwer": 0.7283653846153846}
+{"id": "SparseLibriMix2_noisy_000227", "tag": "full", "t": 9.2, "cond": "agsc", "n_kw": 17, "cpwer": 0.7668269230769231}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.023809523809523808}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.023809523809523808}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.40476190476190477}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 10, "cpwer": 0.023809523809523808}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 17, "cpwer": 0.047619047619047616}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.047619047619047616}
+{"id": "SparseLibriMix2_noisy_000229", "tag": "t8.2", "t": 8.2, "cond": "agsc", "n_kw": 18, "cpwer": 0.047619047619047616}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.15612648221343872}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 8, "cpwer": 0.11067193675889328}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 10, "cpwer": 0.650197628458498}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 14, "cpwer": 0.6047430830039526}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 14, "cpwer": 1.2173913043478262}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.650197628458498}
+{"id": "SparseLibriMix2_noisy_000241", "tag": "full", "t": 8.2, "cond": "agsc", "n_kw": 14, "cpwer": 0.6719367588932806}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.06458333333333333}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.07569444444444445}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 12, "cpwer": 0.04236111111111111}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.06458333333333333}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.05347222222222223}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 15, "cpwer": 0.05347222222222223}
+{"id": "SparseLibriMix2_noisy_000249", "tag": "t14.2", "t": 14.2, "cond": "agsc", "n_kw": 18, "cpwer": 0.06458333333333333}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 8, "cpwer": 0.07894736842105263}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 14, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000262", "tag": "t12.2", "t": 12.2, "cond": "agsc", "n_kw": 17, "cpwer": 0.05263157894736842}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 14, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 16, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 19, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000265", "tag": "t9.9", "t": 9.9, "cond": "agsc", "n_kw": 16, "cpwer": 0.05}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 6, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 13, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000276", "tag": "t9.5", "t": 9.5, "cond": "agsc", "n_kw": 18, "cpwer": 0.0}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.07142857142857142}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.07142857142857142}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 10, "cpwer": 0.05357142857142857}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 12, "cpwer": 0.05357142857142857}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000278", "tag": "t11.7", "t": 11.7, "cond": "agsc", "n_kw": 18, "cpwer": 0.03571428571428571}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 10, "cpwer": 0.7222222222222222}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 12, "cpwer": 0.09375}
+{"id": "SparseLibriMix2_noisy_000303", "tag": "full", "t": 8.6, "cond": "agsc", "n_kw": 12, "cpwer": 0.09375}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.09065934065934066}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.09065934065934066}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 6, "cpwer": 0.09065934065934066}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 8, "cpwer": 0.09065934065934066}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 16, "cpwer": 0.07142857142857142}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 16, "cpwer": 0.14285714285714285}
+{"id": "SparseLibriMix2_noisy_000326", "tag": "full", "t": 10.5, "cond": "agsc", "n_kw": 20, "cpwer": 0.19780219780219782}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.22523219814241485}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 0, "cpwer": 0.22523219814241485}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 0, "cpwer": 0.22523219814241485}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 4, "cpwer": 0.19891640866873064}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 17, "cpwer": 0.22523219814241485}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 10, "cpwer": 0.19891640866873064}
+{"id": "SparseLibriMix2_noisy_000351", "tag": "full", "t": 13.2, "cond": "agsc", "n_kw": 20, "cpwer": 0.19891640866873064}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t1", "t": 1, "cond": "agsc", "n_kw": 0, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t2", "t": 2, "cond": "agsc", "n_kw": 4, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t3", "t": 3, "cond": "agsc", "n_kw": 4, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t4", "t": 4, "cond": "agsc", "n_kw": 12, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t6", "t": 6, "cond": "agsc", "n_kw": 16, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "t8", "t": 8, "cond": "agsc", "n_kw": 18, "cpwer": 0.08823529411764706}
+{"id": "SparseLibriMix2_noisy_000355", "tag": "full", "t": 8.1, "cond": "agsc", "n_kw": 18, "cpwer": 0.08823529411764706}
