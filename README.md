@@ -14,7 +14,7 @@
 
 </div>
 
-> **📦 双仓库开源发布**：本 GitHub 仓库包含全部代码、配置、评测清单与实验结果；数据与模型（10,000 条源音频、20,000 个上下文标注、15,433 条训练数据、16,275 条评测音频、23 个 LoRA 权重）托管在 [HuggingFace](https://huggingface.co/datasets/AustinZhang/Omni-Context)。克隆代码 + 下载数据即可完整复现。
+> **📦 双仓库开源发布**：本 GitHub 仓库包含全部代码、配置、评测清单与实验结果；数据与模型（10,000 条源音频、20,000 个上下文标注、15,433 条训练数据、16,275 条评测音频、21 个 LoRA 权重）托管在 [HuggingFace](https://huggingface.co/datasets/AustinZhang/Omni-Context)。克隆代码 + 下载数据即可完整复现。
 
 ---
 
@@ -111,7 +111,7 @@ flowchart LR
 | **模型** | **3** 个异构 Omni | Qwen3-Omni 30B · MiniCPM-o 8B · Ming-flash 104B-MoE |
 | **训练数据** | **5** 个数据集，**15,433** 条 | 重叠 SFT 4,728 · 噪声 SFT 3,500 · S1 单人噪声 2,400 · 合成扩充 2,000 · 重叠 v1 2,805 |
 | **评测基准** | **6** 任务，**16,275** wav | SparseLibriMix2 / AMI / 多说话人检测 / 说话人计数 / 性别识别 / 噪声 ASR |
-| **模型权重** | **23** 个 LoRA | 3 模型 ×（重叠 / 噪声 / 门控 RL / 全链 / CSB / 门控矫正）|
+| **模型权重** | **21** 个 LoRA | 3 模型 ×（重叠 / 噪声 / 门控 RL / 全链 / CSB / 门控矫正）+ Qwen3 门控中间版 |
 | **实验结果** | **220** 个 JSON/JSONL + **14** 张图 | 报告中每个数字均可溯源 |
 | **报告** | 6 份（综合总报告 / 论文级 / 噪声 / 流式 / RL / 总报告）| md + 楷体 docx + PDF |
 
@@ -382,7 +382,7 @@ Omni-Context/
 │   ├── _manifest/                     # 金标 manifest
 │   └── _agsc/                         # 预测线索 JSONL
 ├── datasets/                          # 5 个训练 JSONL（15,433 条）
-├── checkpoints/                       # 22 个 LoRA 权重 + SepFormer
+├── checkpoints/                       # 21 个 LoRA 权重 + SepFormer
 └── results/                           # 实验结果（JSON/JSONL + 14 张图）
 ```
 
@@ -538,13 +538,13 @@ python make_summary_figs.py && python make_gdpo_figs.py && python make_chain_fig
 
 > **真值严格区分**（开源可信度关键）：`_manifest/` 的 `label` 是确定金标；`_agsc/` 的 timeline / clue 关键词带 `provenance=predicted/unverified` 字段——数据层面就把「线索」与「答案」分开。
 >
-> 📦 **完整复现所需资产**：源音频数据集（`Omni-Context-DataSet/`，10,000 wav + 20,000 标注）、评测基准音频（`benchmarks/_wav/` + `_wham/`，16,275 wav）、训练数据（`datasets/`，15,433 条）、模型权重（`checkpoints/`，23 个 LoRA）托管在 [HuggingFace](https://huggingface.co/datasets/AustinZhang/Omni-Context)；全部代码（`code/`，74 py + 10 sh）、评测清单（`benchmarks/_manifest/` + `_agsc/`）和实验结果（`results/`）在本 GitHub 仓库中。
+> 📦 **完整复现所需资产**：源音频数据集（`Omni-Context-DataSet/`，10,000 wav + 20,000 标注）、评测基准音频（`benchmarks/_wav/` + `_wham/`，16,275 wav）、训练数据（`datasets/`，15,433 条）、模型权重（`checkpoints/`，21 个 LoRA）托管在 [HuggingFace](https://huggingface.co/datasets/AustinZhang/Omni-Context)；全部代码（`code/`，74 py + 10 sh）、评测清单（`benchmarks/_manifest/` + `_agsc/`）和实验结果（`results/`）在本 GitHub 仓库中。
 
 ---
 
 ## 12. 模型权重（LoRA Checkpoints）
 
-`checkpoints/` 下 23 个 LoRA，按三模型 × 阶段组织：
+`checkpoints/` 下 21 个 LoRA，按三模型 × 阶段组织：
 
 | 阶段 | Qwen3 | MiniCPM | Ming |
 |---|---|---|---|
@@ -553,9 +553,9 @@ python make_summary_figs.py && python make_gdpo_figs.py && python make_chain_fig
 | 门控 RL（阶段一）| `qwen3_gdpo_gate_lora` | `minicpm_gdpo_gate_lora` + `minicpm_grpo_gate_lora`(对照) | `ming_gdpo_gate_lora` |
 | 全链 RL（阶段二）| `qwen3_chain_lora` | `minicpm_chain_lora` + `_v2`(Eq.8) | `ming_chain_lora` |
 | CSB 大训练 | `qwen3_csb_lora` | `minicpm_csb_lora` | `ming_csb_lora` |
-| **门控矫正** | `qwen3_csb_lora_gatesft` | `minicpm_csb_lora_gatesft` | `ming_csb_lora_gatesft` |
+| **门控矫正** | `qwen3_csb_lora_gatesft` + `qwen3_csb_lora_gatefix`(中间版) | `minicpm_csb_lora_gatesft` | `ming_csb_lora_gatesft` |
 
-外加 `_sepformer`（前置分离器权重）。
+上表共 **21** 个 LoRA；另加 `_sepformer`（前置分离器权重）。
 
 ---
 
