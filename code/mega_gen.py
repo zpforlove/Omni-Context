@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """MegaBench 生成器（开源套件核心）：全金标 / 说话人隔离 / 三档成熟度线索。
 --part mix : 合成全部流音频+金标 manifest（CPU 为主，~40min）
 --part clue: 三档线索（SepFormer+Mega-ASR，GPU，支持 --shard i --nshard n 分片）
@@ -9,7 +12,7 @@
 """
 import argparse, glob, json, os, random, re, sys, warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 LS = "/cpfs_speech3/yulian.zpf/Librispeech"
 sys.path.insert(0, ROOT + "/code")
 import numpy as np

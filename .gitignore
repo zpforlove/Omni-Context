@@ -46,3 +46,13 @@ logs/
 # ---------- 临时文件 ----------
 *.tmp
 *.bak
+
+# 路径修复备份 & 本地补丁 (勿提交)
+*.bak_orig
+*.bak_gatefix
+Omni-Context-patch/
+
+# 大型压缩包 (托管在 HuggingFace, 勿提交到 GitHub)
+Omni-Context-DataSet.tar.gz
+benchmarks_wav.tar.gz
+*.tar.gz

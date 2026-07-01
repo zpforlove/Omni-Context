@@ -5,7 +5,7 @@
 #   阶段3 Ming   : 3 条件串行, 4 卡 (ming)
 #   阶段4 报告
 CB=/cpfs_speech3/yulian.zpf/anaconda3/etc/profile.d/conda.sh
-ROOT=/cpfs_speech3/yulian.zpf/Omni-Context
+ROOT="${OMNI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 LOG=$ROOT/logs
 CONDS="NoCtx_real AGSC_real AGSC_silent"
 

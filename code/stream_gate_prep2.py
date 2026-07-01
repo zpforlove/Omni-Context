@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Part C 预处理：门控端到端评测的数据准备。
 1) 复用 stream_gate.synth/detect：合成 30 条 [clean|complex|clean] 流 + 逐秒检测器门控时间线。
 2) 干净段伪参考：Mega-ASR 转写干净源音频截断段(干净语音上近金标，报告如实标注)。
@@ -9,7 +12,7 @@
 """
 import json, os, sys, re, warnings, tempfile
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import numpy as np, soundfile as sf, torch, torchaudio
 import stream_gate as G

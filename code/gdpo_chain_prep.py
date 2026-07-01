@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """C1（omni-pipeline env）：全链路 GDPO 训练数据扩备。
 1) 120 条复合训练流：补 clue@2s / clue@4s（复杂段前缀线索）+ 干净段 Mega-ASR 伪参考。
 2) 合成 40 条纯干净训练流（门控负样本，~11s，三段干净拼接）+ 伪参考。
@@ -5,7 +8,7 @@
 """
 import json, os, sys, re, warnings, tempfile
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import numpy as np, soundfile as sf
 import stream_gate as G

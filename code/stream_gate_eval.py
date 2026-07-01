@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Part C 推理：门控端到端三策略对比（+oracle 上界）。
 对每条 [clean|complex|clean] 合成流，4 条件：
   baseline : 无线索
@@ -7,7 +10,7 @@
 评分：4 参考置换不变 cpWER(整体) + 干净段/复杂段词召回(分离看"保干净/增复杂")。
 """
 import json, os, sys, argparse, time, itertools, re
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 ROOT = R.ROOT

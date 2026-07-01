@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C 合成数据扩充：从全量 test.jsonl 生成高质量合成训练样本（gold 线索，零泄漏）。
   B_overlap_target：重叠场景，gold 目标说话人时间窗+性别（不含文字）→ 转写主说话人
   A_noise_biasing ：噪声场景，真词+干扰词打乱候选集（不含完整句）→ 噪声转写
@@ -10,7 +13,7 @@ import os
 import random
 import re
 
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
 MAN = DS + "/manifests/test.jsonl"
 rng = random.Random(20260607)
 CONTRACT = ("注意：下面是自动工具给的【线索】（时间/性别或候选词提示），未经验证、可能含干扰且【不含完整答案】；"
@@ -37,7 +40,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--n_overlap", type=int, default=1500)
     ap.add_argument("--n_noise", type=int, default=500)
-    ap.add_argument("--out", default="/cpfs_speech3/yulian.zpf/Omni-Context/datasets/synth_extra.jsonl")
+    ap.add_argument("--out", default=os.path.join(OMNI_ROOT, "datasets/synth_extra.jsonl"))
     a = ap.parse_args()
 
     rows = [json.loads(l) for l in open(MAN, encoding="utf-8")]

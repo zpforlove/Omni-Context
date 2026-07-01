@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """C4：全链路评测。--model M --tag T [--lora P] --part e1|e2|reason|all
 E1 全链路：30 评测复合流 × 线索{none, full}：GATE 准确率 + 4参考 cpWER + 干净/复杂段召回
 E2 流式增量利用：55 条 S2 曲线集（heldout）× 线索{none,t2,t4,full}（stream_clues 前缀线索）:
@@ -5,7 +8,7 @@ E2 流式增量利用：55 条 S2 曲线集（heldout）× 线索{none,t2,t4,ful
 E3 推理：SpeakerCounting / MultiSpeakerDetection acc
 """
 import argparse, json, os, sys, statistics as st
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 from stream_gate_eval import perm_cpwer, recall, render_clue, CONTRACT

@@ -1,8 +1,11 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """测量 S2 离线线索生成管线(SepFormer 分离 + Mega-ASR 双路转写 + 门控关键词)的单样本耗时。
 分解：load(一次性) / 每样本 sep / 每样本 asr。"""
 import json, os, sys, time, tempfile, warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import torch, torchaudio, soundfile as sf
 from speechbrain.inference.separation import SepformerSeparation

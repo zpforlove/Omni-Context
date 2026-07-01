@@ -1,7 +1,10 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """评测行优先线索补齐：只处理 mega_eval 中缺线索的 mix 行。"""
 import json, glob, sys, re, warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 done = set()
 for p in glob.glob(f"{ROOT}/benchmarks/_agsc/mega_clues_shard*.jsonl"):

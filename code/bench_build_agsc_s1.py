@@ -1,10 +1,13 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-B：给 S1 eval manifest 产 predicted-noise-AGSC（VAD+SNR+Mega 候选，零泄漏）。"""
 import json
 import os
 import sys
 import warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 
 

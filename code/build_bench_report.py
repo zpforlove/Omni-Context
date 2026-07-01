@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage B-4：下游 benchmark 报告 —— Baseline vs +AGSC 准确率 + 非照抄诊断。
 对齐样本(同 id 同时有 baseline 与 agsc 结果)上对比：
   acc(baseline), acc(agsc), Δ=agsc-baseline, acc(diarizer-only 线索)
@@ -8,7 +11,7 @@ import json
 import os
 from collections import defaultdict
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 RAW = ROOT + "/results/bench_raw"
 
 

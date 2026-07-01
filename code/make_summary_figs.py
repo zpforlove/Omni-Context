@@ -1,9 +1,12 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """汇总图×4：训练内化 / 实时性 / S2三设计对比 / 门控五策略。数据=各报告实测值。"""
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 M3 = ["Qwen3-Omni 30B", "MiniCPM-o 8B", "Ming 104B-MoE"]
 C = {"before": "#9aa0a6", "after": "#0F7B6C", "b2": "#c9cdd2", "a2": "#7fb8ad"}
 

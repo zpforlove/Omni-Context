@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """C3：全链路 GDPO 统一训练器（Gate-then-Transcribe）。--model qwen3_omni|minicpm_o|ming
 回合：流音频(mix/clean) + 随机成熟度线索(none/t2/t4/full) → 单次生成 [GATE行+转写]。
 三奖励：r_format / r_gate(Eq.8条件) / r_asr=1−cpWER(Eq.8条件)，GDPO 解耦归一化(Eq.4/6/7)。
@@ -5,10 +8,10 @@ rollout：温度采样 G=4（MiniCPM 用 do_sample= 正确参数名；Qwen3/Ming
 logprob：教师强制（与各自部署模板一致）。
 """
 import argparse, json, os, random, sys, time, itertools, re
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import numpy as np
 import torch
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 import run_bench_eval as RB
 from stream_gate_eval import perm_cpwer, render_clue, CONTRACT
 

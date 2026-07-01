@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C：Ming-flash-omni-2.0 (BailingMM2) LoRA SFT —— 4 卡 naive-MP（222G），env=ming。
 复用 Ming 适配器的 load（device_map/_split_model + eager + DynamicCache 垫片）。
 输入：复刻 adapter.infer 的 processor 构造（+assistant target）；
@@ -14,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import yaml  # noqa
 from run_eval import get_adapter
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 DATA = ROOT + "/datasets/stage_c_train_v2.jsonl"
 ADAPTER_OUT = ROOT + "/checkpoints/ming_agsc_lora"
 

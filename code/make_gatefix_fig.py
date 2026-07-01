@@ -1,9 +1,12 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """门控塌缩矫正前后对比图：三模型 干净流gate_acc 塌缩(~0)→治后(1.0) + 转写不退化(复杂段召回/mix cpWER)。"""
 import json, statistics as st
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-R = "/cpfs_speech3/yulian.zpf/Omni-Context/results"
+R = os.path.join(OMNI_ROOT, "results")
 MODELS = [("mcpm", "MiniCPM 8B", "#C0504D"), ("q3", "Qwen3 30B", "#5B8DB8"), ("ming", "Ming 104B", "#6B4E3D")]
 
 

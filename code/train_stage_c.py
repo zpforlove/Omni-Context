@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C：Qwen3-Omni LoRA SFT —— 让模型学会用门控 AGSC 时间窗在重叠/会议中归属说话人。
 数据：datasets/stage_c_train.jsonl（门控 AGSC + gold 目标，零泄漏）。
 标签：仅监督 assistant(target) 部分，prompt 与音频占位 mask 为 -100。
@@ -13,7 +16,7 @@ import sys
 import torch
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 MODEL = "/cpfs_speech3/yulian.zpf/Qwen3-Omni-30B-A3B-Instruct"
 DATA = ROOT + "/datasets/stage_c_train.jsonl"
 ADAPTER_OUT = ROOT + "/checkpoints/qwen3_agsc_lora"

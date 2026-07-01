@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Context-Speech Bench 构建器（开源套件核心 #2）。
 --part zh_mix : AISHELL-3 中文自混重叠+注噪复合流（train 说话人 1400+600干净 / test 说话人 300+100）
 --part merge  : 汇总 EN(mega)+ZH(aishell)+S1(中文单人噪声)+AMI(英文真实会议) → csb_{train,eval}.jsonl
@@ -5,7 +8,7 @@
 """
 import argparse, glob, json, os, random, sys, warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 A3 = "/cpfs_speech3/yulian.zpf/AISHELL-3"
 sys.path.insert(0, ROOT + "/code")
 import numpy as np

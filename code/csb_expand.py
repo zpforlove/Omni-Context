@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Context-Speech Bench 场景扩展：在 mega 基础上补两个场景轴，使每个目标场景独立成档。
   ovl  重叠无噪复合流 (train 1500 / eval 100)   —— 多说话人重叠场景
   sn   单人+噪声复合流 (train 1500 / eval 100)  —— 噪声场景
@@ -6,7 +9,7 @@
 """
 import json, os, random, sys, warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import numpy as np
 import soundfile as sf

@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """RL 论文级报告补充图×3：方法示意 / E2 成熟度前后曲线 / MiniCPM 张力帕累托。"""
 import json, os, statistics as st
 import matplotlib
@@ -5,7 +8,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 import numpy as np
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"; R = ROOT + "/results"
+ROOT = OMNI_ROOT; R = ROOT + "/results"
 
 # ---- fig A: method schematic ----
 fig, ax = plt.subplots(figsize=(11, 5.2)); ax.axis("off")

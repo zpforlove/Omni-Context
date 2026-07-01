@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Part A 推理：对每个 (id, 前缀t) 在三条件下做 S2 双说话人 ASR，cpWER↓ 对完整 label 评分。
   baseline      : 截断音频 + 无线索
   agsc_stream   : 截断音频 + 【仅前缀算出的】流式线索
@@ -5,7 +8,7 @@
 复用 run_bench_eval 的 build_prompt / cpwer。
 """
 import json, os, sys, argparse, time
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 ROOT = R.ROOT

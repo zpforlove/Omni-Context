@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-B：S1（单人+噪声）数据集构建。
 - eval held-out manifest（跨 SNR×环境，200 条）→ benchmarks/_manifest/speech_env_S1.jsonl
 - 训练文件（gold 噪声线索：SNR 档位 + 候选词偏置[含干扰/打乱/泄漏门禁]）→ datasets/s1_train.jsonl
@@ -8,8 +11,8 @@ import os
 import random
 import re
 
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
+ROOT = OMNI_ROOT
 MAN = DS + "/manifests/test.jsonl"
 rng = random.Random(20260608)
 INSTR = "请只输出这段音频中说话人所说的中文文字（背景有噪声），不要解释。"

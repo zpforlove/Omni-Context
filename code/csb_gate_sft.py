@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """门控塌缩 SFT 矫正。
 RL 救不动饱和门控(logit差~20→softmax梯度≈0，GDPO组内advantage常抵消)；
 SFT 交叉熵 -log p(CLEAN) 在 p→0 时梯度极大，直接破饱和。
@@ -5,7 +8,7 @@ SFT 交叉熵 -log p(CLEAN) 在 p→0 时梯度极大，直接破饱和。
 热启动自 csb_lora，存 _gatesft 新路径不覆盖原 lora。
 """
 import argparse, json, os, sys, random
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import torch
 import run_bench_eval as R
 from gdpo_chain_train import POLICIES, build_prompt, CK_NAME

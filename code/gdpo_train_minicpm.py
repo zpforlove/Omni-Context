@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO/GRPO 门控强化学习训练器 v2（MiniCPM-o 8B + LoRA，单卡，omni-context-mcpm env）。
 
 实现 arXiv:2601.05242 GDPO，针对二元门控动作空间的高效精确版：
@@ -13,11 +16,11 @@
               干净窗判 COMPLEX → −0.5（实测注入伤干净段）；判 CLEAN → 0
 """
 import argparse, json, os, random, sys
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import numpy as np
 import torch
 import librosa
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 PROMPT = ("Listen to this short audio clip. Decide if it is acoustically COMPLEX "
           "(two or more people talking at the same time, or strong background noise) "
           "or CLEAN (one clear speaker, little noise). "

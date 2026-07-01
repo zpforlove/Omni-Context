@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """context-synth-pipeline —— 可泛化、可开源的 AGSC 合成流水线核心。
 
 输入任意音频 → 上游自动标注（pyannote-3.1 说话人日志 + Mega-ASR 分段转写）→ 产出
@@ -16,8 +19,8 @@ import os
 import sys
 
 MEGA = "/cpfs_speech3/yulian.zpf/Mega-ASR"
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
+ROOT = OMNI_ROOT
 sys.path.insert(0, MEGA + "/src")
 
 

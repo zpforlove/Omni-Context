@@ -1,10 +1,13 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-C 分析：S1/S2 训练前 baseline vs +AGSC，按 SNR/难度切片（验证 H1/H2）。"""
 import json
 import os
 import sys
 import statistics as st
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 RAW = ROOT + "/results/bench_raw"
 MANI = ROOT + "/benchmarks/_manifest"
 

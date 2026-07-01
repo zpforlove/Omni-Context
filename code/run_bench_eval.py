@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage B-3：下游 benchmark 评测 —— Baseline vs +AGSC（predicted-AGSC，零泄漏）。
 唯一目标：验证我们的 AGSC context 是否真实提升 Omni 模型在真实 benchmark 上的准确率。
 
@@ -17,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import yaml  # noqa
 from run_eval import get_adapter  # noqa
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 BENCH = ROOT + "/benchmarks"
 NUMW = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
         "1": 1, "2": 2, "3": 3, "4": 4, "5": 5}

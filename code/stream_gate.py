@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Part B：流式实时门控检测器。
 1) 合成 mixed 流：[clean 单人 ~4s][complex 2人重叠+噪声 ~4s][clean 单人 ~3s]，记录真值复杂区。
 2) 逐 1s 窗检测器：pyannote 重叠(说话人数≥2) OR 低SNR → 输出 gate 时间线(<ctx_on>/<ctx_off>)。
@@ -6,7 +9,7 @@
 """
 import json, os, sys, warnings, argparse
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import numpy as np, soundfile as sf, torch, torchaudio
 from noise_components import SileroVAD, estimate_snr

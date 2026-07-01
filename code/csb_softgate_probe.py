@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """P3.5 软门控探针：测哨兵 π(COMPLEX) 连续概率在 干净流 vs 复杂流 的分布。
 核心问题：训练后硬门控 argmax 塌缩(干净流也输出COMPLEX)，但连续概率 π 是否仍保留区分度？
   有区分度 → 三档软门控(≥0.8全线索/0.5-0.8弱线索/<0.5不注入)能救塌缩，对标IRAF连续门控。
@@ -5,7 +8,7 @@
 forced-choice：哨兵prompt后拼"GATE:"，单次解码取首token在 ' COM'(COMPLEX) vs ' CLEAN' 的softmax。
 """
 import argparse, json, sys, statistics as st
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import torch, torch.nn.functional as Fn
 import run_bench_eval as R
 from gdpo_chain_train import build_prompt

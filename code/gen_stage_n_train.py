@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-B：合成统一 Stage-N 训练集 = S1(噪声) + S2(重叠+噪声) + 旧重叠数据(防遗忘)。
 输出 datasets/stage_n_train.jsonl（门控 AGSC + gold + 零泄漏）。
 """
@@ -5,7 +8,7 @@ import json
 import os
 import random
 import sys
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 from run_bench_eval import build_prompt, TASKS  # 复用评测一致的 prompt 构造
 

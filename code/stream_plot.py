@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """聚合 stream_eval__<model>.jsonl，画 Context 增量增益曲线。
 x = 前缀时长(s)，y = cpWER；三条线 baseline / agsc_stream / agsc_offline；按模型分面。
 另输出每模型每前缀的均值表 (markdown) 到 stream_curve_table.md。
@@ -8,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 MODELS = [m for m in ["qwen3_omni", "minicpm_o", "ming"]
           if os.path.exists(f"{ROOT}/results/stream_eval__{m}.jsonl")]
 TAGS = ["t1", "t2", "t3", "t4", "t6", "t8", "full"]

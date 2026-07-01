@@ -1,10 +1,13 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Part D：一 token 实时门控探针——Omni 模型自身当注入检测器。
 从 30 条门控流切窗：干净区(秒1-2/1-3) 与 复杂区(秒5-6/5-7)，窗长 1s/2s。
 提示模型输出单词 COMPLEX / CLEAN，测准确率 + 单窗墙钟延迟。
 这是"模型自带门控 token"的零样本可行性下界(GRPO 内化的起点)。
 """
 import json, os, sys, argparse, time
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml, soundfile as sf
 import run_bench_eval as R
 ROOT = R.ROOT

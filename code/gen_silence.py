@@ -1,11 +1,14 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """为每条样本生成等长静音 wav（AC 探针用：抽掉音频、保留 context）。"""
 import json
 import os
 import numpy as np
 import soundfile as sf
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+ROOT = OMNI_ROOT
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
 OUT = os.path.join(ROOT, "contexts_v3", "silence")
 
 

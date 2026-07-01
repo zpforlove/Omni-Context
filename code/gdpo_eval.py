@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO R3 评测（omni-context-mcpm env）。三个部分：
 A) 探针：120 个 held-out 窗（30 评测流），base / +LoRA 的 CLEAN/COMPLEX 准确率与延迟
 B) 端到端：训好的模型当检测器，对 30 评测流逐 2s 窗(步长1s)滑动判定 → 门控时间线 P/R/F1、
@@ -6,7 +9,7 @@ C) 推理智商：SpeakerCounting / MultiSpeakerDetection（acc，run_bench_eval
 用法: python gdpo_eval.py --part probe|e2e|reason [--lora checkpoints/minicpm_gdpo_gate_lora --tag gdpo]
 """
 import argparse, json, os, sys, time
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import numpy as np
 import yaml
 import run_bench_eval as R

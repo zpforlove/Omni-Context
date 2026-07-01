@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage B-2：给 benchmark 音频产 predicted-AGSC（说话人计数/多说话人任务只需日志，不跑 ASR）。
 用 pyannote-3.1 日志 → n_speakers_est + 话轮时间线 + overlap。绝不看 benchmark 标签 → 零泄漏。
 输出 _agsc/<task>.jsonl：{id, n_speakers_est, n_turns, overlap_regions, timeline, confidence}
@@ -10,7 +13,7 @@ import sys
 import warnings
 warnings.filterwarnings("ignore")
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 BENCH = ROOT + "/benchmarks"
 sys.path.insert(0, ROOT + "/code")
 

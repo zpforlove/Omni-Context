@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """统一 AGSC 任务集生成器（合并转写类 + 推理类，全部已实测真增益）。
 
 唯一目标：产出一个统一任务集，每个任务都经三模型实测验证 context 带来真实、非泄漏增益。
@@ -28,8 +31,8 @@ import random
 import re
 from collections import Counter, defaultdict
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+ROOT = OMNI_ROOT
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
 MARGIN = 0.6  # 秒，连续量任务平局门禁
 OUTDOOR = {"traffic_vehicle", "nature_weather_water", "animal"}
 INDOOR = {"indoor_office", "domestic"}

@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-B：S2（重叠+噪声）数据集构建 —— 给 SparseLibriMix2 注入 WHAM 噪声(多 SNR)，保留每说话人真值。
 读 SparseLibriMix2 manifest(已有 wav + 2行label) → 叠 WHAM 噪声@{0,5,10}dB → 写新音频 + 新 manifest speech-task "SparseLibriMix2_noisy"。
 用法：python noise_inject_s2.py --n 150
@@ -8,7 +11,7 @@ import json
 import os
 import random
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 BENCH = ROOT + "/benchmarks"
 WHAM = BENCH + "/_wham/data/train-00000-of-00010-ce580a0a440284e9.parquet"
 rng = random.Random(20260608)

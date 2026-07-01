@@ -1,9 +1,12 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO R1b（omni-context-mcpm env）：每条训练流预计算下游奖励表。
 对每流跑 MiniCPM 两种转写：baseline / +真值区间线索(gated_v2 措辞)，
 Δ_s = cpwer(base) − cpwer(inj)（>0=注入有益），存 results/gdpo_reward_table.json。
 """
 import json, os, sys, time
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 from stream_gate_eval import perm_cpwer, render_clue, CONTRACT, INSTR, CONSTRAINT

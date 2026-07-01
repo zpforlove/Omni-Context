@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO RL 汇总图×2：
 fig_gdpo_training.png  : MiniCPM GDPO vs GRPO 训练曲线（采样正确率/π_C）+ Qwen3/Ming GDPO 曲线
 fig_gdpo_results.png   : 三模型 探针COMPLEX识别 / 端到端F1 / 推理指标 前后对比
@@ -7,7 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 R = ROOT + "/results"
 
 def load_log(p):

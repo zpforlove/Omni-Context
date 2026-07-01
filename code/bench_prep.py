@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage B-1：benchmark 预处理。
 把 HF benchmark（Dynamic-SUPERB 说话人子集）抽样、导出音频文件、产统一 manifest。
 manifest 行：{id, task, audio_path, instruction, label}
@@ -7,7 +10,7 @@ import argparse
 import json
 import os
 
-BENCH = "/cpfs_speech3/yulian.zpf/Omni-Context/benchmarks"
+BENCH = os.path.join(OMNI_ROOT, "benchmarks")
 WAV = BENCH + "/_wav"
 MAN = BENCH + "/_manifest"
 

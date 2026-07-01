@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C-1：构建全量训练数据集（门控 AGSC，零泄漏，gold 目标）。
 来源：
   - SparseLibriMix2（2 人重叠转写，cpWER 目标=两行）：训练用 = 全量 manifest − 已评测 held-out
@@ -16,7 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_bench_eval import build_prompt, TASKS  # 复用评测一致的 prompt 构造
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 BENCH = ROOT + "/benchmarks"
 RAW = ROOT + "/results/bench_raw"
 OUT = ROOT + "/datasets"
@@ -63,7 +66,7 @@ def emit_synth_agsc2(fout, stats):
     p = os.path.join(ROOT, "subsets", "agsc2.jsonl")
     if not os.path.exists(p):
         return
-    DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+    DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
     CONTRACT = ("注意：下面是自动工具给的【线索】（时间/性别提示），未经验证、可能含干扰且【不含完整答案】；"
                 "请【听音频】判断真实内容，可参考线索但不要照抄。")
     for r in (json.loads(l) for l in open(p, encoding="utf-8")):

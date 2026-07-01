@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
+ROOT="${OMNI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 # 等本地 wheel 下好后，离线安装 torch(2.1.2+cu118) + 其余依赖。
 set -e
 source /cpfs_speech3/yulian.zpf/anaconda3/etc/profile.d/conda.sh
 conda activate omni-context
-cd /cpfs_speech3/yulian.zpf/Omni-Context/env/wheels
+cd $ROOT/env/wheels
 PIP="python -m pip"
 
 echo "[rest] installing torch/torchaudio from local wheels"

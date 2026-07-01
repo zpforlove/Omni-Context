@@ -1,10 +1,13 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """难1/3 切片曲线：baseline vs agsc-stream（增益处绿色阴影）——展示流式线索在模型失败点的真实优势。"""
 import json, statistics as st
 from collections import defaultdict
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 TAGS = ["t1", "t2", "t3", "t4", "t6", "t8", "full"]
 X = [1, 2, 3, 4, 6, 8, 10]
 NICE = {"qwen3_omni": "Qwen3-Omni 30B", "minicpm_o": "MiniCPM-o 8B", "ming": "Ming 104B-MoE"}

@@ -1,8 +1,11 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Curve B（线索成熟度）：模型听【完整音频】(基线稳定、低方差)，线索由前缀[0:t]计算。
 gain(t)=cpWER_base − cpWER_agsc(clue@t)。隔离"线索需要多少音频才有用"，去除截断音频的未听尾部稀释。
 """
 import json, os, sys, argparse, time
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 ROOT = R.ROOT

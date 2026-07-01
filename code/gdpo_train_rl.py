@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO 门控 RL 统一训练器：--model qwen3_omni | ming（MiniCPM 用 gdpo_train_minicpm.py）。
 
 同 v2 方法：二元动作解析策略 π=softmax(seq_logprob) + ε-探索行为策略 + PPO clip 比率（Eq.3）+
@@ -7,10 +10,10 @@ GDPO 解耦归一化（Eq.4/6/7）。每窗仅 2 次教师强制前向。
               （env ming，4 卡 device_map）
 """
 import argparse, json, os, random, sys
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import numpy as np
 import torch
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 PROMPT = ("Listen to this short audio clip. Decide if it is acoustically COMPLEX "
           "(two or more people talking at the same time, or strong background noise) "
           "or CLEAN (one clear speaker, little noise). "

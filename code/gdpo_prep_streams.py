@@ -1,10 +1,13 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """GDPO R1a（omni-pipeline env）：合成 120 条训练流（comp 30-149，与评测 0-29 不重叠）。
 每流：[clean 4s][complex 4s][clean 3s] + 2s 复杂/干净窗 + 真值区间线索（SepFormer+ASR 门控关键词）。
 输出 benchmarks/_wav/_gdpo_train/ + benchmarks/_agsc/gdpo_train.jsonl
 """
 import json, os, sys, re, warnings, tempfile
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 import numpy as np, soundfile as sf, torch, torchaudio
 import stream_gate as G

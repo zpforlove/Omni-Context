@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-C 整改：给 S2(SparseLibriMix2_noisy) 产【富线索】predicted-AGSC。
 denoise(DeepFilterNet) → pyannote 日志 → 每段 Mega-ASR 草稿 → 每说话人 时间窗+内容草稿。
 """
@@ -6,7 +9,7 @@ import os
 import sys
 import warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 
 

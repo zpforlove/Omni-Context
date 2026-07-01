@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """全链路 GDPO 汇总图×2（自动读取 results/chain_e1__*/chain_e2__* 与训练日志）。
 fig_chain_training.png : 三模型训练曲线（fmt/gate/asr 三子图）
 fig_chain_results.png  : E2 转写内化（none/full 线索 cpWER 前后，全部+难1/3）+ E1 对比
@@ -8,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 R = ROOT + "/results"
 MODELS = [("qwen3_omni", "qwen3", "Qwen3-Omni 30B", "#5B8DB8"),
           ("minicpm_o", "mcpm", "MiniCPM-o 8B", "#C0504D"),

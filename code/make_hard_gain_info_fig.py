@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """难样本增益成熟图：曲线B(完整音频+前缀线索)难1/3 增益线(三模型, 几乎全程为正)
 + 线索信息量柱(右轴)。替代贴零的全样本 gain_only 与混杂的 maturity 图。"""
 import json, statistics as st
@@ -5,7 +8,7 @@ from collections import defaultdict
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 TAGS = ["t1", "t2", "t3", "t4", "t6", "t8", "full"]
 X = [1, 2, 3, 4, 6, 8, 10]
 NICE = {"qwen3_omni": "Qwen3-Omni 30B", "minicpm_o": "MiniCPM-o 8B", "ming": "Ming 104B-MoE"}

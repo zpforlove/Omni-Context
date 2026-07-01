@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C：Qwen3-Omni LoRA SFT —— DeepSpeed ZeRO-2 数据并行（4 卡各持全模型，并行不同 batch，~4x 加速）。
 启动：deepspeed --num_gpus 4 train_stage_c_ds.py --epochs 1 [--smoke 6]
 数据：datasets/stage_c_train_v2.jsonl（门控 AGSC + gold + 扩充高质量合成，零泄漏）。
@@ -11,7 +14,7 @@ import deepspeed
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from train_stage_c import build_inputs, _enable_input_grads  # 复用输入构造与梯度 hook
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 MODEL = "/cpfs_speech3/yulian.zpf/Qwen3-Omni-30B-A3B-Instruct"
 DATA = ROOT + "/datasets/stage_n_train.jsonl"
 ADAPTER_OUT = ROOT + "/checkpoints/qwen3_noise_lora"

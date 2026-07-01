@@ -1,9 +1,9 @@
 # Omni-Context 零样本评测配置
-dataset_root: /cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet
-project_root: /cpfs_speech3/yulian.zpf/Omni-Context
+dataset_root: Omni-Context-DataSet
+project_root: .
 
 # 评测子集（由 sampling.py 生成）
-subset_path: /cpfs_speech3/yulian.zpf/Omni-Context/subsets/eval_subset_600.jsonl
+subset_path: subsets/eval_subset_600.jsonl
 subset_size: 600
 sampling_seed: 20260604
 # 仅从 test split 抽样（dev 保留给后续训练调参）

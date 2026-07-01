@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage B Wave2-2：AMI TargetSpeaker-ASR 的 predicted-AGSC（仅用日志器，零泄漏）。
 难点：目标说话人由 enrollment(audio2) 指定。用"前置 enrollment 联合日志"定位目标段：
   concat = [enroll | 0.5s 静音 | mix] → pyannote 日志 → enroll 区间[0,d2] 内占主导的说话人标签 = 目标
@@ -12,7 +15,7 @@ import sys
 import warnings
 warnings.filterwarnings("ignore")
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 BENCH = ROOT + "/benchmarks"
 TASK = "TargetSpeaker-ASR_AMItest"
 GAP = 0.5

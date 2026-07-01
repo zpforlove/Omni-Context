@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """P3：Context-Speech Bench 评测。--model M --tag T [--lora P] --part m1|m1zh|m2|m3|all
 M1   : csb_eval en/mix 抽300 + en/clean 100 × 线索{none,t2,full} × 当前模型
        指标：GATE acc / 金标 perm-cpWER / 干净段+复杂段词召回
@@ -6,7 +9,7 @@ M2   : 旧 30 流回归（stream_gate_eval.jsonl，chain prompt，与历史可�
 M3   : SpeakerCounting / MultiSpeakerDetection acc
 """
 import argparse, json, os, sys, random, statistics as st
-sys.path.insert(0, "/cpfs_speech3/yulian.zpf/Omni-Context/code")
+sys.path.insert(0, os.path.join(OMNI_ROOT, "code"))
 import yaml
 import run_bench_eval as R
 from stream_gate_eval import perm_cpwer, recall

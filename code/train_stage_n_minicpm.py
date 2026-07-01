@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage C：MiniCPM-o-4.5 LoRA SFT（单卡，env=omni-context-mcpm）。
 复刻 chat 的输入构造（teacher_forcing），forward(data, labels=) 透传到底层 LLM 出 loss。
 LoRA 加在 model.llm 的 q/k/v/o_proj。8B 单卡可容，不用梯度检查点。
@@ -12,7 +15,7 @@ import librosa
 import torch
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 MODEL = "/cpfs_speech3/yulian.zpf/MiniCPM-o-4_5"
 DATA = ROOT + "/datasets/stage_n_train.jsonl"
 ADAPTER_OUT = ROOT + "/checkpoints/minicpm_noise_lora"

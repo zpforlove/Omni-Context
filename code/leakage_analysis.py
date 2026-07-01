@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """答案泄漏分析：量化「E2 的提升中有多少只是从 context 抄答案」。
 
 对 600 子集每个样本的每个任务，判断标准答案是否「可直接从 E2 context 抄到」：
@@ -14,8 +17,8 @@ import os
 import re
 from collections import defaultdict
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+ROOT = OMNI_ROOT
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
 
 
 def norm(s):

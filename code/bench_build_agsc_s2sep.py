@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """Stage N-C 整改 v2：S2 富线索 = SepFormer 分离(强前置) → 每说话人 ASR → 【部分打乱关键词】(泄漏门控)。
 既有用(每人内容提示)又零泄漏(不可重建完整答案)。
 """
@@ -8,7 +11,7 @@ import sys
 import random
 import warnings
 warnings.filterwarnings("ignore")
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
+ROOT = OMNI_ROOT
 sys.path.insert(0, ROOT + "/code")
 rng = random.Random(20260608)
 

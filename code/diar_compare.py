@@ -1,3 +1,6 @@
+import os as _os_omni
+OMNI_ROOT = _os_omni.environ.get("OMNI_ROOT") or _os_omni.path.abspath(_os_omni.path.join(_os_omni.path.dirname(_os_omni.path.abspath(__file__)), _os_omni.pardir))
+_os_omni.chdir(OMNI_ROOT)
 """说话人日志模型对比：CAM++ vs pyannote-3.1，在我们样本上算 DER 与说话人数准确率。"""
 import json
 import os
@@ -11,8 +14,8 @@ def _p(self, u, pr, st, ve, ce):
     s = _orig(self, u, pr, st, ve, ce); s["verify"] = False; return s
 _rq.Session.merge_environment_settings = _p
 
-ROOT = "/cpfs_speech3/yulian.zpf/Omni-Context"
-DS = "/cpfs_speech3/yulian.zpf/Omni-Context/Omni-Context-DataSet"
+ROOT = OMNI_ROOT
+DS = os.path.join(OMNI_ROOT, "Omni-Context-DataSet")
 sys.path.insert(0, ROOT + "/code")
 
 
